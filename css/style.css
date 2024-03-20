@@ -22,8 +22,8 @@
 }
 .main-container aside #profile {
   background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
-  height: 32%;
-  padding: 30px;
+  height: 42%;
+  padding: 0 30px;
 }
 .main-container aside #profile #name_img {
   display: flex;
@@ -34,13 +34,13 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  margin-bottom: 7px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 .main-container aside #profile #name_img span {
   color: #fafafc;
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 7px;
 }
 .main-container aside #profile #textTyping {
   text-align: center;
@@ -49,16 +49,35 @@
   color: #00BC91;
   font-size: 14px;
 }
+.main-container aside #profile #user-info {
+  margin-top: 25px;
+  padding-top: 5px;
+  border-top: 1px solid #37393a;
+}
+.main-container aside #profile #user-info ul {
+  list-style-type: none;
+}
+.main-container aside #profile #user-info ul li {
+  font-size: 13px;
+  color: #9c9c9c;
+  display: flex;
+  margin: 6px 0;
+}
+.main-container aside #profile #user-info ul li .flex-1 {
+  color: #fafafc;
+  font-weight: 500;
+  flex: 1 1 0%;
+}
 .main-container aside nav {
   background-color: #20202A;
-  padding: 20px 20px;
-  height: 52%;
+  padding: 30px 20px;
+  height: 51.5%;
 }
 .main-container aside nav ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 100%;
 }
 .main-container aside nav ul li a {
@@ -80,41 +99,25 @@
 }
 .main-container aside #accounts {
   background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
-  padding: 10px 40px;
-  height: 16%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  padding: 0 30px;
+  height: 6.5%;
 }
 .main-container aside #accounts ul {
   list-style-type: none;
   width: 100%;
+  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 0 40px;
 }
 .main-container aside #accounts ul li a {
   text-decoration: none;
-  font-size: 25px;
-  color: #fafafc;
+  font-size: 22px;
+  color: lightgray;
 }
 .main-container aside #accounts ul li a:hover {
   color: #00BC91;
-}
-.main-container aside #accounts button {
-  background-color: #00BC91;
-  width: 100%;
-  color: #fafafc;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 10px 30px;
-  border-radius: 30px;
-  border: none;
-  letter-spacing: 1px;
-}
-.main-container aside #accounts button:hover {
-  background-color: #069c7a;
 }
 .main-container main {
   width: 80%;
@@ -128,6 +131,20 @@
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
   height: 300px;
+}
+.main-container main section #home button {
+  background-color: #00BC91;
+  width: 100%;
+  color: #fafafc;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 30px;
+  border-radius: 30px;
+  border: none;
+  letter-spacing: 1px;
+}
+.main-container main section #home button:hover {
+  background-color: #069c7a;
 }
 .main-container::after {
   content: "";
