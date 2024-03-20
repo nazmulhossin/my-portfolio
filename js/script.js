@@ -9,6 +9,10 @@ var typed5 = new Typed('#textAnimation', {
     loop: true
 });
 
+// Get current year
+const date = new Date();
+document.getElementById("curr_year").innerHTML = date.getFullYear();
+
 // Smooth Scroll
 // if(!document.querySelector("html").classList.contains('w-editor')){
 //     const lenis = new Lenis({
