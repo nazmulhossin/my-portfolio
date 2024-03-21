@@ -163,7 +163,7 @@
             h2 {
                 color: #fafafc;
                 font-size: 22px;
-                font-weight: 600;
+                font-weight: 500;
                 margin-bottom: 20px;
             }
 
@@ -194,10 +194,8 @@
                     form {
                         .form-group {
                             position: relative;
-
-                            &:not(:last-child) {
-                                margin-bottom: 30px;
-                            }
+                            background-color: red;
+                            margin-bottom: 30px;
 
                             i {
                                 background: #20202a;
@@ -211,10 +209,10 @@
                                 padding: 0 15px;
                                 font-size: 20px;
                                 line-height: 50px;
-                            }
 
-                            .fa-envelope {
-                                height: 100%;
+                                &.fa-envelope {
+                                    height: 100%;
+                                }
                             }
 
                             input, textarea {
@@ -234,11 +232,27 @@
 
                             textarea {
                                 resize: vertical;
-                                height: 150px;
+                                min-height: 150px;
                                 padding-top: 15px;
+                                display: block;
                             }
                         }
                         
+                        button {
+                            background-color: #00BC91;
+                            color: #fafafc;
+                            font-size: 15px;
+                            font-weight: 600;
+                            padding: 10px 30px;
+                            border: none;
+                            letter-spacing: 1px;
+                            cursor: pointer;
+            
+                            &:hover {
+                                background-color: #069c7a;
+                                color: white;
+                            }
+                        }
                     }
                 }
             }

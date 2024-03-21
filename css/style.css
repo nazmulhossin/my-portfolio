@@ -133,7 +133,7 @@
 .main-container main section h2 {
   color: #fafafc;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 .main-container main section#home button {
@@ -156,8 +156,7 @@
 }
 .main-container main section#contact #form-wrapper form .form-group {
   position: relative;
-}
-.main-container main section#contact #form-wrapper form .form-group:not(:last-child) {
+  background-color: red;
   margin-bottom: 30px;
 }
 .main-container main section#contact #form-wrapper form .form-group i {
@@ -173,7 +172,7 @@
   font-size: 20px;
   line-height: 50px;
 }
-.main-container main section#contact #form-wrapper form .form-group .fa-envelope {
+.main-container main section#contact #form-wrapper form .form-group i.fa-envelope {
   height: 100%;
 }
 .main-container main section#contact #form-wrapper form .form-group input, .main-container main section#contact #form-wrapper form .form-group textarea {
@@ -191,8 +190,23 @@
 }
 .main-container main section#contact #form-wrapper form .form-group textarea {
   resize: vertical;
-  height: 150px;
+  min-height: 150px;
   padding-top: 15px;
+  display: block;
+}
+.main-container main section#contact #form-wrapper form button {
+  background-color: #00BC91;
+  color: #fafafc;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 30px;
+  border: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.main-container main section#contact #form-wrapper form button:hover {
+  background-color: #069c7a;
+  color: white;
 }
 .main-container main section#copyright {
   padding: 15px;
