@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -120,14 +122,16 @@
   color: #00BC91;
 }
 .main-container main {
+  background: #1e1e28;
   width: calc(100% - 300px);
   height: 100%;
   overflow: auto;
   padding: 0 30px;
   font-size: 16px;
   color: #8c8c8e;
+  position: relative;
 }
-.main-container main section:not(:last-child) {
+.main-container main section {
   margin-bottom: 30px;
 }
 .main-container main section h2 {
@@ -137,12 +141,16 @@
   margin-bottom: 20px;
 }
 .main-container main section#home {
+  height: 100%;
+}
+.main-container main section#home #intro {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  height: 83%;
   position: relative;
   color: #fafafc;
 }
-.main-container main section#home h1 {
+.main-container main section#home #intro h1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -150,10 +158,10 @@
   font-weight: 800;
   margin: 50px;
 }
-.main-container main section#home h1 span {
+.main-container main section#home #intro h1 span {
   color: #00BC91;
 }
-.main-container main section#home button {
+.main-container main section#home #intro button {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -169,14 +177,31 @@
   width: fit-content;
   cursor: pointer;
 }
-.main-container main section#home button:hover {
+.main-container main section#home #intro button:hover {
   background-color: #069c7a;
 }
-.main-container main section#home img {
+.main-container main section#home #intro img {
   width: 400px;
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.main-container main section#home #overview {
+  margin-top: 2%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container main section#home #overview p {
+  color: #fafafc;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+.main-container main section#home #overview p .counter {
+  color: #00BC91;
+  font-size: 30px;
+  font-weight: 600;
 }
 .main-container main section#contact #form-wrapper {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
@@ -238,10 +263,19 @@
   color: white;
 }
 .main-container main section#copyright {
+  margin-bottom: 0;
   padding: 15px;
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
   text-align: center;
+}
+.main-container main #hider {
+  background-color: #191923;
+  width: 30px;
+  height: calc(100vh - 30px);
+  position: fixed;
+  top: 15px;
+  right: 15px;
 }
 .main-container::after {
   content: "";

@@ -32,7 +32,7 @@
             <nav>
                 <ul>
                     <li class="active"><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
-                    <li><a href=""><i class="fa-solid fa-user"></i> About Me</a></li>
+                    <li><a href="#about"><i class="fa-solid fa-user"></i> About Me</a></li>
                     <li><a href="#skills"><i class="fa-solid fa-head-side-virus"></i> Skills</a></li>
                     <li><a href="#programming"><i class="fa-solid fa-laptop-code"></i>Programming</a></li>
                     <li><a href="#achievements"><i class="fa-solid fa-trophy"></i>Achievements</a></li>
@@ -51,16 +51,24 @@
         </aside>
     
         <main class="column" id="scrollable-content">
-
             <section id="home" >
-                <div id="particles-js"></div>
-                <h1>Hi,<br> I am <span>Md. Nazmul Hossain</span>,<br> A Competitive Programmer<br> & Web Developer</h1>
-                <button>DOWNLOAD RESUME <i class="fa-solid fa-download"></i></button>
-                <img src="img/nazmul1.png" alt="nazmul">
+                <div id="intro">
+                    <div id="particles-js"></div>
+                    <h1>Hi,<br> This is <span>Md. Nazmul Hossain</span>,<br> A Competitive Programmer<br> & Web Developer</h1>
+                    <button>DOWNLOAD RESUME <i class="fa-solid fa-download"></i></button>
+                    <img src="img/nazmul1.png" alt="nazmul">
+                </div>
+                
+                <div id="overview">
+                    <p><span class="counter"><span data-finalValue="5">0</span>+</span> <span>Years Programming Career</span></p>
+                    <p><span class="counter"><span data-finalValue="1300">0</span>+</span> <span>Problems Solved</span></p>
+                    <p><span class="counter"><span data-finalValue="116">0</span>+</span> <span>Contests Participated</span></p>
+                    <p><span class="counter"><span data-finalValue="2">0</span></span> <span>Completed Projects</span></p>
+                </div>
             </section>
 
-            <section id="overview">
-
+            <section id="about">
+                <h2>About Me</h2>
             </section>
 
             <section id="skills">
@@ -96,6 +104,8 @@
             <section id="copyright">
                 Copyright &copy; 2024 - <span id="curr_year"></span> by Md. Nazmul Hossain. All rights reserved.
             </section>
+
+            <div id="hider"></div>
         </main>
     </div>
 
