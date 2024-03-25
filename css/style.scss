@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --font-size-default: 16px;
+    --font-size-small: 14px;
+    --mb-15: 15px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -51,6 +57,7 @@
 
             #textTyping {
                 text-align: center;
+
                 span {
                     color: #00BC91;
                     font-size: 14px;
@@ -75,9 +82,7 @@
                             color: #fafafc;
                             font-weight: 500;
                             flex: 1 1 0%;
-
                         }
-                        
                     }
                 }
             }
@@ -100,7 +105,7 @@
                         text-decoration: none;
                         font-size: 15px;
                         color: rgba(250, 250, 250, 0.9);
-                        font-weight: 400;
+                        font-weight: 500;
                         display: inline-block;
                         padding: 5px 20px;
 
@@ -111,11 +116,13 @@
                         &:hover {
                             color: #00BC91;
                         }
+
+                        &.active {
+                            color: #00BC91;
+                        }
                     }
 
-                    &.active a {
-                        color: #00BC91;
-                    }
+                    
                 }
             }
         }
@@ -154,40 +161,103 @@
         width: calc(100% - 300px);
         height: 100%;
         overflow: auto;
-        padding: 0 30px;
+        padding: 0 15px;
         font-size: 16px;
+        font-weight: 400;
         color: #8c8c8e;
         position: relative;
 
         section {
-            margin-bottom: 30px;
-
             h2 {
                 color: #fafafc;
                 font-size: 22px;
-                font-weight: 500;
-                margin-bottom: 20px;
+                font-weight: 400;
+                padding: 15px;
             }
 
-            &#home {
-                height: 100%;
+            .big-card-container {
+                padding: 15px;
 
-                #intro {
+                .big-card {
                     background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
                     -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
                     box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+                }
+            }
+
+            .card-container {
+                display: flex;
+                flex-wrap: wrap;
+
+                .card {
+                    padding: 15px;
+                    width: 33.3333333%;
+    
+                    .card-wrapper {
+                        background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+                        -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+                        box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+                        padding: 30px;
+    
+                        h4 {
+                            color: #fafafc;
+                            font-weight: 600;
+                        }
+        
+                        a {
+                            text-decoration: none;
+                            color: #069c7a;
+                            font-weight: 600;
+                            letter-spacing: 1.5px;
+                            transition: 0.5s ease-in-out;
+                            font-size: 14px;
+                            display: flex;
+                            align-items: center;
+                            width: fit-content;
+            
+                            span {
+                                margin-left: 4px;
+                                transition: 0.5s ease-in-out;
+                                font-size: 16px;
+                            }
+        
+                            &:hover {
+                                color: #00BC91;
+                                text-shadow: 0 0 0.7px #00BC91;
+        
+                                span {
+                                    margin-left: 7px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #home {
+            height: 100%;
+            margin-bottom: 0;
+
+            .big-card-container {
+                padding-top: 0;
+
+                .big-card {
                     height: 83%;
                     position: relative;
                     color: #fafafc;
-
+                    overflow-x: hidden;
+                    padding: 0;
+    
                     h1 {
                         position: absolute;
                         top: 0;
                         left: 0;
                         font-size: 35px;
                         font-weight: 800;
-                        margin: 50px;
-
+                        margin-top: 70px;
+                        margin-left: 50px;
+    
                         span {
                             color: #00BC91;
                         }
@@ -198,7 +268,7 @@
                         bottom: 0;
                         left: 0;
                         margin: 50px;
-                        background-color: #00BC91;
+                        background-color: #069c7a;
                         color: #fafafc;
                         font-size: 15px;
                         font-weight: 600;
@@ -206,122 +276,175 @@
                         border: none;
                         letter-spacing: 1px;
                         width: fit-content;
+                        transition: all 0.5s ease;
                         cursor: pointer;
         
                         &:hover {
-                            background-color: #069c7a;
+                            background-color: #00BC91;
                         }
                     }
-
+    
                     img {
                         width: 400px;
                         position: absolute;
                         bottom: 0;
-                        right: 0;
+                        right: -205px;
+                    }
+                }
+            }
+
+            #overview {
+                margin-top: 2%;
+                padding: 0 25px;
+                display: flex;
+                justify-content: space-between;
+                
+                p {
+                    color: #fafafc;
+                    font-weight: 600;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .counter {                        
+                        color: #00BC91;
+                        font-size: 30px;                                                 
+                    }
+                }
+            }
+        }
+
+        #programming {
+            .card-container .card .card-wrapper {
+                .svg-icon {
+                    text-align: center;
+                    
+                    svg, img {
+                        height: 100px;
+                        transition: transform 0s;
+                    }
+
+                    img {
+                        border-radius: 10px;
                     }
                 }
 
-                #overview {
-                    margin-top: 2%;
-                    padding: 0 10px;
+                &:hover .svg-icon svg, &:hover .svg-icon img {
+                    transition: transform 1.3s ease;
+                    transform: rotateY(360deg)
+                }
+
+                h4 {
+                    text-align: center;
+                    margin-bottom: (var(--mb-15));
+                }
+
+                .summary {
+                    margin-bottom: (var(--mb-15));
                     display: flex;
                     justify-content: space-between;
+                    line-height: 1.8;
                     
                     p {
-                        color: #fafafc;
-                        font-weight: 500;
                         display: flex;
-                        flex-direction: column;
-                        
-                        .counter {                        
-                            color: #00BC91;
-                            font-size: 30px;   
-                            font-weight: 600;                                                
-                        }
-                    }
-                }
-            }
+                        color: #999999;
+                        color: #8c8c8e;
+                        letter-spacing: 0.5px;
+                        line-height: 1.8;
 
-            &#contact {
-                #form-wrapper {
-                    background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
-                    -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
-                    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
-                    padding: 30px;
-
-                    form {
-                        .form-group {
-                            position: relative;
-                            background-color: red;
-                            margin-bottom: 30px;
-
-                            i {
-                                background: #20202a;
-                                color: #8c8c8e;
-                                text-align: center;
-                                position: absolute;
-                                height: 50px;
-                                width: 50px;
-                                top: 0;
-                                left: 0;
-                                padding: 0 15px;
-                                font-size: 20px;
-                                line-height: 50px;
-
-                                &.fa-envelope {
-                                    height: 100%;
-                                }
-                            }
-
-                            input, textarea {
-                                background: linear-gradient(159deg, #252532 0%, #23232d 100%);
-                                width: 100%;
-                                height: 50px;
-                                padding: 0 15px 0 65px;
-                                border: none;
-                                color: #fafafc;
-                                font-size: 16px;
-                                font-weight: 400;
-
-                                &:focus {
-                                    outline: none;
-                                }
-                            }
-
-                            textarea {
-                                resize: vertical;
-                                min-height: 150px;
-                                padding-top: 15px;
-                                display: block;
-                            }
-                        }
-                        
-                        button {
-                            background-color: #00BC91;
+                        .flex-1 {
                             color: #fafafc;
-                            font-size: 15px;
-                            font-weight: 600;
-                            padding: 10px 30px;
-                            border: none;
-                            letter-spacing: 1px;
-                            cursor: pointer;
-            
-                            &:hover {
-                                background-color: #069c7a;
-                                color: white;
+                            
+                            flex: 1 1 0%;
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        #contact {
+            #form-wrapper {
+                padding: 30px;
+
+                form {
+                    .form-group {
+                        position: relative;
+                        background-color: red;
+                        margin-bottom: 30px;
+
+                        i {
+                            background: #20202a;
+                            color: #8c8c8e;
+                            text-align: center;
+                            position: absolute;
+                            height: 50px;
+                            width: 50px;
+                            top: 0;
+                            left: 0;
+                            padding: 0 15px;
+                            font-size: 20px;
+                            line-height: 50px;
+
+                            &.fa-envelope {
+                                height: 100%;
                             }
+                        }
+
+                        input, textarea {
+                            background: linear-gradient(159deg, #252532 0%, #23232d 100%);
+                            width: 100%;
+                            height: 50px;
+                            padding: 0 15px 0 65px;
+                            border: none;
+                            color: #fafafc;
+                            font-size: 16px;
+                            font-weight: 400;
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        textarea {
+                            resize: vertical;
+                            min-height: 150px;
+                            padding-top: 15px;
+                            display: block;
+                        }
+                    }
+                    
+                    button {
+                        background-color: #069c7a;
+                        color: #fafafc;
+                        font-size: 15px;
+                        font-weight: 600;
+                        padding: 10px 30px;
+                        border: none;
+                        letter-spacing: 1px;
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+        
+                        &:hover {
+                            background-color: #00BC91;
                         }
                     }
                 }
             }
+        }
 
-            &#copyright {
-                margin-bottom: 0;
-                padding: 15px;
-                background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
-                -webkit-box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
-                box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
-                text-align: center;
+        #copyright {
+            .big-card-container {
+                padding-bottom: 0;
+
+                .big-card {
+                    text-align: center;
+                    font-weight: 500;
+                    padding: 15px;
+    
+                    .name {
+                        color: #00BC91;
+                    }
+                }
             }
         }
 
