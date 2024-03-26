@@ -133,7 +133,7 @@
   height: 100%;
   overflow: auto;
   padding: 0 15px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: #8c8c8e;
   position: relative;
@@ -173,7 +173,7 @@
   color: #069c7a;
   font-weight: 600;
   letter-spacing: 1.5px;
-  transition: 0.5s ease-in-out;
+  transition: all 0.7s ease-in-out;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -182,7 +182,7 @@
 }
 .main-container main section .card-container .card .card-wrapper a span {
   margin-left: 4px;
-  transition: 0.5s ease-in-out;
+  transition: all 0.7s ease-in-out;
   font-size: 16px;
 }
 .main-container main section .card-container .card .card-wrapper a:hover {
@@ -264,36 +264,39 @@
   text-align: center;
 }
 .main-container main #programming .card-container .card .card-wrapper .svg-icon svg, .main-container main #programming .card-container .card .card-wrapper .svg-icon img {
-  height: 100px;
+  height: 70px;
+  margin-bottom: 5px;
   transition: transform 0s;
 }
 .main-container main #programming .card-container .card .card-wrapper .svg-icon img {
   border-radius: 10px;
 }
-.main-container main #programming .card-container .card .card-wrapper:hover .svg-icon svg, .main-container main #programming .card-container .card .card-wrapper:hover .svg-icon img {
-  transition: transform 1.3s ease;
-  transform: rotateY(360deg);
+.main-container main #programming .card-container .card .card-wrapper .svg-icon.toph img {
+  background-color: #e2e2e2;
+  padding: 10px 5px;
 }
 .main-container main #programming .card-container .card .card-wrapper h4 {
   text-align: center;
   margin-bottom: var(--mb-15);
+  font-size: 17px;
 }
 .main-container main #programming .card-container .card .card-wrapper .summary {
   margin-bottom: var(--mb-15);
   display: flex;
   justify-content: space-between;
-  line-height: 1.8;
+  line-height: 1.5;
+  transition: all 0.7s ease-in-out;
 }
-.main-container main #programming .card-container .card .card-wrapper .summary p {
-  display: flex;
-  color: #999999;
-  color: #8c8c8e;
-  letter-spacing: 0.5px;
-  line-height: 1.8;
+.main-container main #programming .card-container .card .card-wrapper:hover .svg-icon svg, .main-container main #programming .card-container .card .card-wrapper:hover .svg-icon img {
+  transition: transform 1.3s ease;
+  transform: rotateY(360deg);
 }
-.main-container main #programming .card-container .card .card-wrapper .summary p .flex-1 {
+.main-container main #programming .card-container .card .card-wrapper:hover a {
+  color: #00BC91;
+}
+.main-container main #programming .card-container .card .card-wrapper:hover .summary {
   color: #fafafc;
-  flex: 1 1 0%;
+  opacity: 0.8;
 }
 .main-container main #contact #form-wrapper {
   padding: 30px;

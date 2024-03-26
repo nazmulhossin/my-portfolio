@@ -162,7 +162,7 @@
         height: 100%;
         overflow: auto;
         padding: 0 15px;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
         color: #8c8c8e;
         position: relative;
@@ -209,7 +209,7 @@
                             color: #069c7a;
                             font-weight: 600;
                             letter-spacing: 1.5px;
-                            transition: 0.5s ease-in-out;
+                            transition: all 0.7s ease-in-out;
                             font-size: 14px;
                             display: flex;
                             align-items: center;
@@ -217,7 +217,7 @@
             
                             span {
                                 margin-left: 4px;
-                                transition: 0.5s ease-in-out;
+                                transition: all 0.7s ease-in-out;
                                 font-size: 16px;
                             }
         
@@ -319,13 +319,33 @@
                     text-align: center;
                     
                     svg, img {
-                        height: 100px;
+                        height: 70px;
+                        margin-bottom: 5px;
                         transition: transform 0s;
                     }
 
                     img {
                         border-radius: 10px;
                     }
+
+                    &.toph img {
+                        background-color: #e2e2e2;
+                        padding: 10px 5px;
+                    }
+                }
+
+                h4 {
+                    text-align: center;
+                    margin-bottom: (var(--mb-15));
+                    font-size: 17px;
+                }
+
+                .summary {
+                    margin-bottom: (var(--mb-15));
+                    display: flex;
+                    justify-content: space-between;
+                    line-height: 1.5;
+                    transition: all 0.7s ease-in-out;          
                 }
 
                 &:hover .svg-icon svg, &:hover .svg-icon img {
@@ -333,31 +353,13 @@
                     transform: rotateY(360deg)
                 }
 
-                h4 {
-                    text-align: center;
-                    margin-bottom: (var(--mb-15));
+                &:hover a {
+                    color: #00BC91;
                 }
 
-                .summary {
-                    margin-bottom: (var(--mb-15));
-                    display: flex;
-                    justify-content: space-between;
-                    line-height: 1.8;
-                    
-                    p {
-                        display: flex;
-                        color: #999999;
-                        color: #8c8c8e;
-                        letter-spacing: 0.5px;
-                        line-height: 1.8;
-
-                        .flex-1 {
-                            color: #fafafc;
-                            
-                            flex: 1 1 0%;
-                        }
-                    }
-                    
+                &:hover .summary {
+                    color: #fafafc;
+                    opacity: 0.8;
                 }
             }
         }
