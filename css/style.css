@@ -156,19 +156,51 @@
   flex-wrap: wrap;
 }
 .main-container main section .card-container .card {
+  flex: 0 0 33.33333%;
   padding: 15px;
-  width: 33.3333333%;
 }
 .main-container main section .card-container .card .card-wrapper {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
   padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main-container main section .card-container .card .card-wrapper .logo {
+  text-align: center;
+}
+.main-container main section .card-container .card .card-wrapper .logo svg, .main-container main section .card-container .card .card-wrapper .logo img {
+  height: 70px;
+  margin-bottom: 5px;
+  transition: transform 0s;
+}
+.main-container main section .card-container .card .card-wrapper .logo img {
+  border-radius: 10px;
+}
+.main-container main section .card-container .card .card-wrapper .logo.toph img {
+  background-color: #e2e2e2;
+  padding: 10px 5px;
 }
 .main-container main section .card-container .card .card-wrapper h4 {
   color: #fafafc;
+  font-size: 17px;
   font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.main-container main section .card-container .card .card-wrapper .summary {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+  transition: all 0.7s ease-in-out;
+}
+.main-container main section .card-container .card .card-wrapper .summary b {
+  font-weight: 650;
 }
 .main-container main section .card-container .card .card-wrapper a {
+  margin-top: auto;
   text-decoration: none;
   color: #069c7a;
   font-weight: 600;
@@ -191,6 +223,17 @@
 }
 .main-container main section .card-container .card .card-wrapper a:hover span {
   margin-left: 7px;
+}
+.main-container main section .card-container .card .card-wrapper:hover .logo svg, .main-container main section .card-container .card .card-wrapper:hover .logo img {
+  transition: transform 1.3s ease;
+  transform: rotateY(360deg);
+}
+.main-container main section .card-container .card .card-wrapper:hover a {
+  color: #00BC91;
+}
+.main-container main section .card-container .card .card-wrapper:hover .summary {
+  color: #fafafc;
+  opacity: 0.8;
 }
 .main-container main #home {
   height: 100%;
@@ -260,43 +303,21 @@
   color: #00BC91;
   font-size: 30px;
 }
-.main-container main #programming .card-container .card .card-wrapper .svg-icon {
-  text-align: center;
-}
-.main-container main #programming .card-container .card .card-wrapper .svg-icon svg, .main-container main #programming .card-container .card .card-wrapper .svg-icon img {
-  height: 70px;
-  margin-bottom: 5px;
-  transition: transform 0s;
-}
-.main-container main #programming .card-container .card .card-wrapper .svg-icon img {
-  border-radius: 10px;
-}
-.main-container main #programming .card-container .card .card-wrapper .svg-icon.toph img {
+.main-container main #programming .card-container .card .card-wrapper .logo.toph img {
   background-color: #e2e2e2;
   padding: 10px 5px;
 }
-.main-container main #programming .card-container .card .card-wrapper h4 {
-  text-align: center;
-  margin-bottom: var(--mb-15);
-  font-size: 17px;
+.main-container main #achievements .card-container .card .card-wrapper h4 {
+  height: 50px;
 }
-.main-container main #programming .card-container .card .card-wrapper .summary {
-  margin-bottom: var(--mb-15);
-  display: flex;
-  justify-content: space-between;
-  line-height: 1.5;
-  transition: all 0.7s ease-in-out;
+.main-container main #achievements .card-container .card .card-wrapper .logo.ncpc_ju img {
+  background-color: #f8f7f7;
+  padding: 7px;
 }
-.main-container main #programming .card-container .card .card-wrapper:hover .svg-icon svg, .main-container main #programming .card-container .card .card-wrapper:hover .svg-icon img {
-  transition: transform 1.3s ease;
-  transform: rotateY(360deg);
-}
-.main-container main #programming .card-container .card .card-wrapper:hover a {
-  color: #00BC91;
-}
-.main-container main #programming .card-container .card .card-wrapper:hover .summary {
-  color: #fafafc;
-  opacity: 0.8;
+.main-container main #achievements .card-container .card .card-wrapper .logo.cpu img {
+  background-color: #f8f7f7;
+  padding: 3px;
+  border-radius: 5px;
 }
 .main-container main #contact #form-wrapper {
   padding: 30px;

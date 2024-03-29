@@ -190,21 +190,59 @@
                 flex-wrap: wrap;
 
                 .card {
+                    flex: 0 0 33.33333%;
                     padding: 15px;
-                    width: 33.3333333%;
     
                     .card-wrapper {
                         background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
                         -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
                         box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
                         padding: 30px;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+
+                        .logo {
+                            text-align: center;
+                            
+                            svg, img {
+                                height: 70px;
+                                margin-bottom: 5px;
+                                transition: transform 0s;
+                            }
+        
+                            img {
+                                border-radius: 10px;
+                            }
+        
+                            &.toph img {
+                                background-color: #e2e2e2;
+                                padding: 10px 5px;
+                            }
+                        }
     
                         h4 {
                             color: #fafafc;
+                            font-size: 17px;
                             font-weight: 600;
+                            text-align: center;
+                            margin-bottom: 15px;
+                        }
+
+                        .summary {
+                            margin-bottom: 15px;
+                            display: flex;
+                            justify-content: space-between;
+                            line-height: 1.5;
+                            transition: all 0.7s ease-in-out;
+                            
+                            b {
+                                font-weight: 650;
+                            }
                         }
         
                         a {
+                            margin-top: auto;
                             text-decoration: none;
                             color: #069c7a;
                             font-weight: 600;
@@ -229,6 +267,20 @@
                                     margin-left: 7px;
                                 }
                             }
+                        }
+        
+                        &:hover .logo svg, &:hover .logo img {
+                            transition: transform 1.3s ease;
+                            transform: rotateY(360deg)
+                        }
+        
+                        &:hover a {
+                            color: #00BC91;
+                        }
+        
+                        &:hover .summary {
+                            color: #fafafc;
+                            opacity: 0.8;
                         }
                     }
                 }
@@ -315,52 +367,33 @@
 
         #programming {
             .card-container .card .card-wrapper {
-                .svg-icon {
-                    text-align: center;
-                    
-                    svg, img {
-                        height: 70px;
-                        margin-bottom: 5px;
-                        transition: transform 0s;
-                    }
-
-                    img {
-                        border-radius: 10px;
-                    }
-
+                .logo {
                     &.toph img {
                         background-color: #e2e2e2;
                         padding: 10px 5px;
                     }
-                }
+                } 
+            }
+        }
 
+        #achievements {
+            .card-container .card .card-wrapper {
                 h4 {
-                    text-align: center;
-                    margin-bottom: (var(--mb-15));
-                    font-size: 17px;
+                    height: 50px;
                 }
 
-                .summary {
-                    margin-bottom: (var(--mb-15));
-                    display: flex;
-                    justify-content: space-between;
-                    line-height: 1.5;
-                    transition: all 0.7s ease-in-out;          
-                }
+                .logo {
+                    &.ncpc_ju img {
+                        background-color: #f8f7f7;
+                        padding: 7px;
+                    }
 
-                &:hover .svg-icon svg, &:hover .svg-icon img {
-                    transition: transform 1.3s ease;
-                    transform: rotateY(360deg)
-                }
-
-                &:hover a {
-                    color: #00BC91;
-                }
-
-                &:hover .summary {
-                    color: #fafafc;
-                    opacity: 0.8;
-                }
+                    &.cpu img {
+                        background-color: #f8f7f7;
+                        padding: 3px;
+                        border-radius: 5px;
+                    }
+                } 
             }
         }
 
