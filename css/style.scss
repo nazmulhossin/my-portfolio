@@ -204,10 +204,10 @@
 
                         .logo {
                             text-align: center;
+                            margin-bottom: 5px;
                             
                             svg, img {
                                 height: 70px;
-                                margin-bottom: 5px;
                                 transition: transform 0s;
                             }
         
@@ -395,6 +395,96 @@
                     }
                 } 
             }
+        }
+
+        #projects {
+            .card-container {
+                .card {
+                    flex: 0 0 50%;
+
+                    .card-wrapper {
+                        .project-screenshots {
+                            overflow: hidden;
+                            margin-bottom: 20px;
+
+                            .project-screenshots-wrapper {
+                                display: flex;
+                                transition: transform 0.2s ease-in-out;
+    
+                                img {
+                                    width: 100%;
+                                }
+    
+                                &:hover {
+                                    animation: slide 8s infinite;
+    
+                                    @keyframes slide {
+                                        0% {transform: translateX(0);}
+                                        16% {transform: translateX(0);}
+                                        21% {transform: translateX(-100%);}
+                                        37% {transform: translateX(-100%);}
+                                        42% {transform: translateX(-200%);}
+                                        58% {transform: translateX(-200%);}
+                                        63% {transform: translateX(-300%);}
+                                        79% {transform: translateX(-300%);}
+                                        84% {transform: translateX(-400%);}
+                                        100% {transform: translateX(-400%);}
+                                    }
+                                }
+                            }
+                        }
+
+                        .project-screenshot {
+                            width: 100%;
+                            height: 250px;
+                            overflow: hidden;
+                            margin-bottom: 20px;
+                            border: 2px solid #8c8c8e;
+            
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: top center;
+                                transition: all 0.2s ease-in-out;
+            
+                                &:hover {
+                                    object-position: bottom center;
+                                    transition: all 3s linear;
+                                }
+                            }
+                        }
+
+                        .links {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: auto;
+
+                            a:nth-child(2) {
+                                width: 105px;
+                            }
+                        }
+                    }
+                }
+            }
+            // .project-screenshot {
+            //     width: 300px;
+            //     height: 300px;
+            //     overflow: hidden;
+            //     margin: 50px auto;
+
+            //     img {
+            //         width: 100%;
+            //         height: 100%;
+            //         object-fit: cover;
+            //         object-position: top center;
+            //         transition: all 1s ease-in-out;
+
+            //         &:hover {
+            //             object-position: bottom center;
+            //         }
+            //     }
+            // }
         }
 
         #contact {
