@@ -177,9 +177,14 @@
         section {
             h2 {
                 color: var(--dark-heading-text-color);
-                font-size: 22px;
-                font-weight: 400;
+                font-size: 20px;
+                font-weight: 300;
                 padding: 15px;
+
+                span {
+                    font-weight: 600;
+                    color: var(--link-hover-color);
+                }
             }
 
             .big-card-container {
@@ -481,67 +486,123 @@
         }
 
         #contact {
-            #form-wrapper {
+            .big-card {
                 padding: 30px;
 
-                form {
-                    .form-group {
-                        position: relative;
-                        margin-bottom: 30px;
+                p {
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
 
-                        i {
-                            background: #20202a;
-                            text-align: center;
-                            position: absolute;
-                            height: 50px;
-                            width: 50px;
-                            top: 0;
-                            left: 0;
-                            padding: 0 15px;
-                            font-size: 20px;
-                            line-height: 50px;
+                #contact-wrapper {
+                    display: flex;
 
-                            &.fa-envelope {
-                                height: 100%;
+                    #contact-info {
+                        width: 45%;
+
+                        .contact-group {
+                            margin-bottom: 10px;
+                            display: flex;
+                            gap: 20px;
+                            width: fit-content;
+
+                            div:first-child {
+                                width: 45px;
+                                height: 45px;
+                                border: 2px solid var(--link-hover-color);
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: all 0.5s ease-in-out;
+
+                                i {
+                                    font-size: 18px;
+                                    color: var(--link-hover-color);
+                                    transition: all 0.5s ease-in-out;
+                                }
                             }
-                        }
 
-                        input, textarea {
-                            background: linear-gradient(159deg, #252532 0%, #23232d 100%);
-                            width: 100%;
-                            height: 50px;
-                            padding: 0 15px 0 65px;
-                            border: none;
-                            color: var(--dark-heading-text-color);
-                            font-size: 16px;
-                            font-weight: 400;
-
-                            &:focus {
-                                outline: none;
+                            div:last-child {
+                                h4 {
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    color: var(--dark-heading-text-color);
+                                }
                             }
-                        }
 
-                        textarea {
-                            resize: vertical;
-                            min-height: 150px;
-                            padding-top: 15px;
-                            display: block;
+                            &:hover div:first-child {
+                                background-color: var(--link-hover-color);
+
+                                i {
+                                    color: #ffffff;
+                                }
+                            }
                         }
                     }
-                    
-                    button {
-                        background-color: var(--link-color);
-                        color: var(--dark-heading-text-color);
-                        font-size: 15px;
-                        font-weight: 600;
-                        padding: 10px 30px;
-                        border: none;
-                        letter-spacing: 1px;
-                        cursor: pointer;
-                        transition: all 0.5s ease;
+
+                    #form-wrapper {
+                        width: 55%;
+                        form {
+                            .form-group {
+                                position: relative;
+                                margin-bottom: 30px;
         
-                        &:hover {
-                            background-color: var(--link-hover-color);
+                                i {
+                                    background: #20202a;
+                                    text-align: center;
+                                    position: absolute;
+                                    height: 50px;
+                                    width: 50px;
+                                    top: 0;
+                                    left: 0;
+                                    padding: 0 15px;
+                                    font-size: 20px;
+                                    line-height: 50px;
+        
+                                    &.fa-envelope {
+                                        height: 100%;
+                                    }
+                                }
+        
+                                input, textarea {
+                                    background: linear-gradient(159deg, #252532 0%, #23232d 100%);
+                                    width: 100%;
+                                    height: 50px;
+                                    padding: 0 15px 0 65px;
+                                    border: none;
+                                    color: var(--dark-heading-text-color);
+                                    font-size: 16px;
+                                    font-weight: 400;
+        
+                                    &:focus {
+                                        outline: none;
+                                    }
+                                }
+        
+                                textarea {
+                                    resize: vertical;
+                                    min-height: 130px;
+                                    padding-top: 15px;
+                                    display: block;
+                                }
+                            }
+                            
+                            button {
+                                background-color: var(--link-color);
+                                color: var(--dark-heading-text-color);
+                                font-size: 15px;
+                                font-weight: 600;
+                                padding: 10px 30px;
+                                border: none;
+                                letter-spacing: 1px;
+                                cursor: pointer;
+                                transition: all 0.5s ease;
+                
+                                &:hover {
+                                    background-color: var(--link-hover-color);
+                                }
+                            }
                         }
                     }
                 }
@@ -583,7 +644,7 @@
     #theme {
         width: 170px;
         position: fixed;
-        top: 50%;
+        top: 45%;
         right: calc(-170px + 17px);
         transition: all 0.5s ease-out;
 
@@ -828,22 +889,31 @@
         }
 
         #contact {
-            #form-wrapper {
-                form {
-                    .form-group {
-                        i {
-                            background: #20202a;
-                            background: lightgray;
-                        }
-
-                        input, textarea {
-                            background: #f3f3f3;
+            .big-card {
+                #contact-wrapper {
+                    #contact-info {
+                        .contact-group div h4 {
                             color: var(--light-heading-text-color);
                         }
                     }
-                    
-                    button {
-                        color: #fafafc;
+
+                    #form-wrapper {
+                        form {
+                            .form-group {
+                                i {
+                                    background: rgb(192, 192, 192);
+                                }
+        
+                                input, textarea {
+                                    background: #e3e3e3;
+                                    color: var(--light-heading-text-color);
+                                }
+                            }
+                            
+                            button {
+                                color: #fafafc;
+                            }
+                        }
                     }
                 }
             }

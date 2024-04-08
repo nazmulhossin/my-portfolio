@@ -38,7 +38,7 @@ const main = document.querySelector("main");
 main.onscroll = () => {
     sections.forEach(section => {
         const top = main.scrollTop;
-        const offset = section.offsetTop - 100;
+        const offset = section.offsetTop - 170;
         const height = section.offsetHeight;
         const sectionId = section.getAttribute("id");
         
