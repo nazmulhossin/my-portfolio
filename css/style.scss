@@ -169,6 +169,7 @@
         height: 100%;
         overflow: auto;
         padding: 0 15px;
+        padding-right: 45px;
         font-size: 15px;
         font-weight: 400;
         color: var(--dark-paragraph-text-color);
@@ -267,7 +268,7 @@
             
                             span {
                                 margin-left: 4px;
-                                transition: all 0.7s ease-in-out;
+                                transition: all 0.5s ease-in-out;
                                 font-size: 16px;
                             }
         
@@ -372,6 +373,43 @@
                     .counter {                        
                         color: var(--link-hover-color);
                         font-size: 30px;                                                 
+                    }
+                }
+            }
+        }
+
+        #about {
+            .big-card-container {
+                .big-card {
+                    padding: 30px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    div:first-child {
+                        width: 60%;
+                    }
+
+                    div:last-child {
+                        width: 32%;
+                        color: var(--dark-heading-text-color);
+
+                        p {
+                            padding: 12px 0;
+                            border-bottom: 1px solid rgba(250, 250, 250, 0.12);
+
+                            span {
+                                font-weight: 600;
+                            }
+
+                            a {
+                                text-decoration: none;
+                                color: var(--link-color);
+
+                                &:hover {
+                                    color: var(--link-hover-color);
+                                }
+                            }
+                        }
                     }
                 }
             }

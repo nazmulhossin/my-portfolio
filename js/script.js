@@ -1,4 +1,4 @@
-// Text Typing Animation
+/* Text Typing Animation */
 var typed5 = new Typed('#textAnimation', {
     strings: ['Competitive Programmer', 'Specialist in Codeforces', 'Web Developer'],
     typeSpeed: 30,
@@ -9,7 +9,7 @@ var typed5 = new Typed('#textAnimation', {
     loop: true
 });
 
-// Counter Up
+/* Counter Up Animation */
 const overviewEle = document.querySelectorAll(".counter span");
 const interval = 2000;
 overviewEle.forEach(ele => {
@@ -25,13 +25,79 @@ overviewEle.forEach(ele => {
     }, duration);
 });
 
-// Get current year
+/* call api for finding problem solving info */
+// fetch codeforces info
+var codeforcesSolved = 950, codeforcesContest = 79, codeforcesRating = 1441;
+fetch('https://codeforces.com/api/user.status?handle=nazmul_hossin')
+    .then(response => {
+        if(!response.ok) {
+            document.getElementById("leetcode-solved").innerHTML = codeforcesSolved;
+            throw new Error(response.status);
+        }
+            
+        return response.json();
+    })
+    .then(data => console.log(data))
+    .catch(error => document.getElementById("leetcode-solved").innerHTML = codeforcesSolved);
+
+fetch('https://codeforces.com/api/user.rating?handle=nazmul_hossin')
+    .then(response => {
+        if(!response.ok) {
+            document.getElementById("codeforces-contest").innerHTML = codeforcesContest;
+            throw new Error(response.status);
+        }
+            
+        return response.json();
+    })
+    .then(data => document.getElementById("codeforces-contest").innerHTML = data.result.length)
+    .catch(error => document.getElementById("codeforces-contest").innerHTML = codeforcesContest);
+
+
+fetch('https://codeforces.com/api/user.info?handles=nazmul_hossin&checkHistoricHandles=false')
+    .then(response => {
+        if(!response.ok) {
+            document.getElementById("codeforces-rating").innerHTML = codeforcesRating;
+            throw new Error(response.status);
+        }
+            
+        return response.json();
+    })
+    .then(data => document.getElementById("codeforces-rating").innerHTML = data.result[0]["maxRating"])
+    .catch(error => document.getElementById("codeforces-rating").innerHTML = codeforcesRating);
+
+// fetch leetcode info
+var leetcodeSolved = 190, leetcodeContest = 8;
+fetch('https://alfa-leetcode-api.onrender.com/nazmul_hossin/solved')
+    .then(response => {
+        if(!response.ok) {
+            document.getElementById("leetcode-solved").innerHTML = leetcodeSolved;
+            throw new Error(response.status);
+        }
+            
+        return response.json();
+    })
+    .then(data => document.getElementById("leetcode-solved").innerHTML = data.solvedProblem)
+    .catch(error => document.getElementById("leetcode-solved").innerHTML = leetcodeSolved);
+
+fetch('https://alfa-leetcode-api.onrender.com/nazmul_hossin/contest')
+    .then(response => {
+        if(!response.ok) {
+            document.getElementById("leetcode-contest").innerHTML = leetcodeContest;
+            throw new Error(response.status);
+        }
+    
+        return response.json();
+    })
+    .then(data => document.getElementById("leetcode-contest").innerHTML = data.contestAttend)
+    .catch(error => document.getElementById("leetcode-contest").innerHTML = leetcodeContest);
+
+
+/* Get current year for copyright section*/
 const date = new Date();
 document.getElementById("curr_year").innerHTML = date.getFullYear();
 
 
-
-// Active Nav Link on Scroll
+/* Active Nav Link on Scroll */
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a");
 const main = document.querySelector("main");
@@ -51,19 +117,18 @@ main.onscroll = () => {
     });
 }
 
-// changing theme and color
+/* changing theme and color */
 // show window on click
 document.getElementById('theme-changing-button').addEventListener("click", () => {
     document.getElementById('theme').classList.toggle("show-them-window");
 });
 
-// changing theme on load
 const currentTheme = localStorage.getItem('lightTheme');
 const mainContainer = document.querySelector('.main-container');
-window.onload = function () {
-    if(currentTheme == 'enabled')
-        mainContainer.classList.add("light-theme");
-};
+
+// changing theme on load
+if(currentTheme == 'enabled')
+    mainContainer.classList.add("light-theme");
 
 // changing theme on click
 document.getElementById('light_theme').addEventListener("click", () => {
@@ -86,39 +151,25 @@ document.querySelector('#color-switcher div').addEventListener('click', function
         if(colorName == "caribbean-green") {
             document.documentElement.style.setProperty('--link-color', "#069c7a");
             document.documentElement.style.setProperty('--link-hover-color', "#00BC91");
-        }
-
-        else if(colorName == "yellow") {
+        } else if(colorName == "yellow") {
             document.documentElement.style.setProperty('--link-color', "#e3aa00");
             document.documentElement.style.setProperty('--link-hover-color', "#FFC107");
-        }
-
-        else if(colorName == "orange") {
+        } else if(colorName == "orange") {
             document.documentElement.style.setProperty('--link-color', "#fa5908");
             document.documentElement.style.setProperty('--link-hover-color', "#FF7004");
-        }
-
-        else if(colorName == "punch") {
+        } else if(colorName == "punch") {
             document.documentElement.style.setProperty('--link-color', "#CD2636");
             document.documentElement.style.setProperty('--link-hover-color', "#dc3545");
-        }
-        
-        else if(colorName == "purple") {
+        } else if(colorName == "purple") {
             document.documentElement.style.setProperty('--link-color', "#5F37A8");
             document.documentElement.style.setProperty('--link-hover-color', "#6f42c1");
-        }
-
-        else if(colorName == "green") {
+        } else if(colorName == "green") {
             document.documentElement.style.setProperty('--link-color', "#218A39");
             document.documentElement.style.setProperty('--link-hover-color', "#28a745");
-        }
-
-        else if(colorName == "violet") {
+        } else if(colorName == "violet") {
             document.documentElement.style.setProperty('--link-color', "#763385");
             document.documentElement.style.setProperty('--link-hover-color', "#803790");
-        }
-
-        else if(colorName == "cyan") {
+        } else if(colorName == "cyan") {
             document.documentElement.style.setProperty('--link-color', "#0BADCE");
             document.documentElement.style.setProperty('--link-hover-color', "#0dcaf0");
         }

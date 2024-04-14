@@ -142,6 +142,7 @@
   height: 100%;
   overflow: auto;
   padding: 0 15px;
+  padding-right: 45px;
   font-size: 15px;
   font-weight: 400;
   color: var(--dark-paragraph-text-color);
@@ -227,7 +228,7 @@
 }
 .main-container main section .card-container .card .card-wrapper a span {
   margin-left: 4px;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
   font-size: 16px;
 }
 .main-container main section .card-container .card .card-wrapper a:hover {
@@ -315,6 +316,32 @@
 .main-container main #home #overview p .counter {
   color: var(--link-hover-color);
   font-size: 30px;
+}
+.main-container main #about .big-card-container .big-card {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container main #about .big-card-container .big-card div:first-child {
+  width: 60%;
+}
+.main-container main #about .big-card-container .big-card div:last-child {
+  width: 32%;
+  color: var(--dark-heading-text-color);
+}
+.main-container main #about .big-card-container .big-card div:last-child p {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.12);
+}
+.main-container main #about .big-card-container .big-card div:last-child p span {
+  font-weight: 600;
+}
+.main-container main #about .big-card-container .big-card div:last-child p a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+.main-container main #about .big-card-container .big-card div:last-child p a:hover {
+  color: var(--link-hover-color);
 }
 .main-container main #programming .card-container .card .card-wrapper .logo.toph img {
   background-color: #e2e2e2;
