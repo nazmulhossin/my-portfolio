@@ -324,9 +324,19 @@
 }
 .main-container main #about .big-card-container .big-card div:first-child {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.main-container main #about .big-card-container .big-card div:first-child h3 {
+  font-size: 28px;
+}
+.main-container main #about .big-card-container .big-card div:first-child h3 span {
+  color: var(--link-hover-color);
 }
 .main-container main #about .big-card-container .big-card div:last-child {
-  width: 32%;
+  position: relative;
+  width: 33%;
   color: var(--dark-heading-text-color);
 }
 .main-container main #about .big-card-container .big-card div:last-child p {
@@ -342,6 +352,24 @@
 }
 .main-container main #about .big-card-container .big-card div:last-child p a:hover {
   color: var(--link-hover-color);
+}
+.main-container main #about .big-card-container .big-card div:last-child button {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--link-color);
+  color: #fafafc;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 15px;
+  border: none;
+  letter-spacing: 1px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.main-container main #about .big-card-container .big-card div:last-child button:hover {
+  background-color: var(--link-hover-color);
 }
 .main-container main #programming .card-container .card .card-wrapper .logo.toph img {
   background-color: #e2e2e2;
@@ -743,6 +771,12 @@
 }
 .main-container.light-theme main #home #overview p {
   color: var(--light-heading-text-color);
+}
+.main-container.light-theme main #about .big-card-container .big-card div:last-child {
+  color: var(--light-heading-text-color);
+}
+.main-container.light-theme main #about .big-card-container .big-card div:last-child p {
+  border-bottom: 1px solid #e6e6e6;
 }
 .main-container.light-theme main #achievements .card-container .card .card-wrapper .logo.ncpc_ju img {
   background-color: transparent;
