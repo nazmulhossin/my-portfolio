@@ -2,10 +2,12 @@
 :root {
   --dark-body-background-color: #191923;
   --dark-main-background-color: #1e1e28;
+  --dark-card-background-color: #2d2d3a;
   --dark-heading-text-color: #fafafc;
   --dark-paragraph-text-color: #8c8c8e;
   --light-body-background-color: lightgray;
   --light-main-background-color: #e2e2e2;
+  --light-card-background-color: #fefefe;
   --light-heading-text-color: #000000;
   --light-paragraph-text-color: #707070;
   --link-color: #069c7a;
@@ -85,7 +87,7 @@
 }
 .main-container aside nav {
   background-color: #20202A;
-  padding: 30px 20px;
+  padding: 20px;
   height: 52%;
 }
 .main-container aside nav ul {
@@ -162,7 +164,7 @@
   padding: 15px;
 }
 .main-container main section .big-card-container .big-card {
-  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  background: var(--dark-card-background-color);
   box-shadow: 0 0 1px 0 rgba(15, 15, 20, 0.2);
 }
 .main-container main section .card-container {
@@ -174,7 +176,7 @@
   padding: 15px;
 }
 .main-container main section .card-container .card .card-wrapper {
-  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  background: var(--dark-card-background-color);
   box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
   padding: 30px;
   height: 100%;
@@ -257,6 +259,7 @@
   padding-top: 0;
 }
 .main-container main #home .big-card-container .big-card {
+  background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
   height: 83%;
   position: relative;
   color: var(--dark-heading-text-color);
@@ -370,6 +373,114 @@
 }
 .main-container main #about .big-card-container .big-card div:last-child button:hover {
   background-color: var(--link-hover-color);
+}
+.main-container main #education .timeline-container {
+  padding: 15px;
+}
+.main-container main #education .timeline-container .timeline {
+  position: relative;
+}
+.main-container main #education .timeline-container .timeline .timeline-item {
+  position: relative;
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-mark {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 3px var(--link-hover-color);
+  background-color: var(--dark-main-background-color);
+  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content {
+  position: relative;
+  margin-left: 45px;
+  background: var(--dark-card-background-color);
+  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  padding: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header div:first-child h4 {
+  color: var(--dark-heading-text-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header div:first-child p {
+  font-size: 17px;
+  color: var(--link-color);
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header .duration .date {
+  background-color: #20202a;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: #646466;
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content .institution-summary {
+  text-align: justify;
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content .institution-summary a {
+  float: right;
+  margin-left: 20px;
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content .institution-summary a img {
+  width: 80px;
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content .institution-summary a img.round-image {
+  border-radius: 50%;
+}
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: #2D2D3A;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 11px;
+  left: -5px;
+}
+.main-container main #education .timeline-container .timeline .timeline-item:hover .timeline-mark span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-main-background-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+.main-container main #education .timeline-container .timeline .timeline-item:hover .timeline-mark::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: var(--link-hover-color);
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.main-container main #education .timeline-container .timeline .timeline-item:hover .timeline-mark::before {
+  animation: pulse 1s ease-out infinite;
+}
+@keyframes pulse {
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+.main-container main #education .timeline-container .timeline::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  height: calc(100% - 10px);
+  width: 5px;
+  background-color: var(--dark-body-background-color);
 }
 .main-container main #programming .card-container .card .card-wrapper .logo.toph img {
   background-color: #e2e2e2;
@@ -752,11 +863,11 @@
   color: var(--light-heading-text-color);
 }
 .main-container.light-theme main section .big-card-container .big-card {
-  background: #fefefe;
+  background: var(--light-card-background-color);
   box-shadow: 0 0 1px 0 rgba(15, 15, 20, 0.2);
 }
 .main-container.light-theme main section .card-container .card .card-wrapper {
-  background: #fefefe;
+  background: var(--light-card-background-color);
   box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
 }
 .main-container.light-theme main section .card-container .card .card-wrapper h4 {
@@ -788,7 +899,7 @@
   color: var(--light-heading-text-color);
 }
 .main-container.light-theme main #contact .big-card #contact-wrapper #form-wrapper form .form-group i {
-  background: rgb(192, 192, 192);
+  background: #c0c0c0;
 }
 .main-container.light-theme main #contact .big-card #contact-wrapper #form-wrapper form .form-group input, .main-container.light-theme main #contact .big-card #contact-wrapper #form-wrapper form .form-group textarea {
   background: #e3e3e3;
