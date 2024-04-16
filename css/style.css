@@ -165,7 +165,7 @@
 }
 .main-container main section .big-card-container .big-card {
   background: var(--dark-card-background-color);
-  box-shadow: 0 0 1px 0 rgba(15, 15, 20, 0.2);
+  box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
 }
 .main-container main section .card-container {
   display: flex;
@@ -177,7 +177,7 @@
 }
 .main-container main section .card-container .card .card-wrapper {
   background: var(--dark-card-background-color);
-  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
   padding: 30px;
   height: 100%;
   display: flex;
@@ -257,10 +257,12 @@
 }
 .main-container main #home .big-card-container {
   padding-top: 0;
+  height: 84.5%;
 }
 .main-container main #home .big-card-container .big-card {
   background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
-  height: 83%;
+  box-shadow: 0 0 2px 0 rgba(15, 15, 20, 0.2);
+  height: 100%;
   position: relative;
   color: var(--dark-heading-text-color);
   overflow-x: hidden;
@@ -305,13 +307,14 @@
   right: -205px;
 }
 .main-container main #home #overview {
-  margin-top: 2%;
+  margin-top: 1.5%;
   padding: 0 25px;
   display: flex;
   justify-content: space-between;
 }
 .main-container main #home #overview p {
   color: var(--dark-heading-text-color);
+  font-size: 16px;
   font-weight: 600;
   display: flex;
   flex-direction: column;
@@ -336,6 +339,9 @@
 }
 .main-container main #about .big-card-container .big-card div:first-child h3 span {
   color: var(--link-hover-color);
+}
+.main-container main #about .big-card-container .big-card div:first-child p {
+  text-align: justify;
 }
 .main-container main #about .big-card-container .big-card div:last-child {
   position: relative;
@@ -392,13 +398,13 @@
   border-radius: 50%;
   border: solid 3px var(--link-hover-color);
   background-color: var(--dark-main-background-color);
-  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
 }
 .main-container main #education .timeline-container .timeline .timeline-item .timeline-content {
   position: relative;
   margin-left: 45px;
   background: var(--dark-card-background-color);
-  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
   padding: 30px;
   margin-bottom: 30px;
   display: flex;
@@ -864,11 +870,9 @@
 }
 .main-container.light-theme main section .big-card-container .big-card {
   background: var(--light-card-background-color);
-  box-shadow: 0 0 1px 0 rgba(15, 15, 20, 0.2);
 }
 .main-container.light-theme main section .card-container .card .card-wrapper {
   background: var(--light-card-background-color);
-  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
 }
 .main-container.light-theme main section .card-container .card .card-wrapper h4 {
   color: var(--light-heading-text-color);
@@ -878,6 +882,7 @@
   opacity: 0.9;
 }
 .main-container.light-theme main #home .big-card-container .big-card {
+  background: var(--light-card-background-color);
   color: var(--light-heading-text-color);
 }
 .main-container.light-theme main #home #overview p {
@@ -888,6 +893,34 @@
 }
 .main-container.light-theme main #about .big-card-container .big-card div:last-child p {
   border-bottom: 1px solid #e6e6e6;
+}
+.main-container.light-theme main #education .timeline-container .timeline .timeline-item .timeline-mark {
+  background-color: var(--light-main-background-color);
+}
+.main-container.light-theme main #education .timeline-container .timeline .timeline-item .timeline-content {
+  background: var(--light-card-background-color);
+}
+.main-container.light-theme main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header div:first-child h4 {
+  color: var(--light-heading-text-color);
+}
+.main-container.light-theme main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header .duration .date {
+  background-color: #d6d6d6;
+  color: var(--light-paragraph-text-color);
+}
+.main-container.light-theme main #education .timeline-container .timeline .timeline-item .timeline-content::before {
+  background-color: var(--light-card-background-color);
+}
+.main-container.light-theme main #education .timeline-container .timeline .timeline-item:hover .timeline-mark span {
+  background-color: var(--light-main-background-color);
+}
+.main-container.light-theme main #education .timeline-container .timeline::before {
+  background-color: var(--light-body-background-color);
+}
+.main-container.light-theme main #programming .card-container .card .card-wrapper .logo.atcoder svg .cls-1 {
+  fill: #fff;
+}
+.main-container.light-theme main #programming .card-container .card .card-wrapper .logo.atcoder svg .cls-2 {
+  fill: #231815;
 }
 .main-container.light-theme main #achievements .card-container .card .card-wrapper .logo.ncpc_ju img {
   background-color: transparent;
