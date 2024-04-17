@@ -186,6 +186,8 @@
 .main-container main section .card-container .card .card-wrapper .logo {
   text-align: center;
   margin-bottom: 5px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .main-container main section .card-container .card .card-wrapper .logo svg, .main-container main section .card-container .card .card-wrapper .logo img {
   height: 70px;
@@ -200,8 +202,8 @@
 }
 .main-container main section .card-container .card .card-wrapper h4 {
   color: var(--dark-heading-text-color);
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 16.5px;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 15px;
 }
@@ -213,7 +215,7 @@
   transition: all 0.5s ease-in-out;
 }
 .main-container main section .card-container .card .card-wrapper .summary b {
-  font-weight: 650;
+  font-weight: 600;
 }
 .main-container main section .card-container .card .card-wrapper a {
   margin-top: auto;
@@ -443,6 +445,9 @@
 .main-container main #education .timeline-container .timeline .timeline-item .timeline-content .institution-summary a img.round-image {
   border-radius: 50%;
 }
+.main-container main #education .timeline-container .timeline .timeline-item .timeline-content.ssc {
+  margin-bottom: 0;
+}
 .main-container main #education .timeline-container .timeline .timeline-item .timeline-content::before {
   content: "";
   height: 10px;
@@ -487,6 +492,26 @@
   height: calc(100% - 10px);
   width: 5px;
   background-color: var(--dark-body-background-color);
+}
+.main-container main #skills .skill-category h3 {
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.main-container main #skills .skill-category .card-container .card {
+  flex: 0 0 25%;
+}
+.main-container main #skills .skill-category .card-container .card .card-wrapper {
+  padding: 18px;
+}
+.main-container main #skills .skill-category .card-container .card .card-wrapper .logo {
+  height: 45px;
+}
+.main-container main #skills .skill-category .card-container .card .card-wrapper .logo svg, .main-container main #skills .skill-category .card-container .card .card-wrapper .logo img {
+  height: 100%;
+}
+.main-container main #skills .skill-category .card-container .card .card-wrapper h4 {
+  margin-bottom: 0;
 }
 .main-container main #programming .card-container .card .card-wrapper .logo.toph img {
   background-color: #e2e2e2;
