@@ -341,15 +341,19 @@
                         left: 0;
                         margin: 50px;
                         background-color: var(--link-color);
-                        color: #fafafc;
-                        font-size: 15px;
-                        font-weight: 600;
-                        padding: 15px;
                         border: none;
-                        letter-spacing: 1px;
                         width: fit-content;
                         transition: all 0.5s ease;
-                        cursor: pointer;
+
+                        a {
+                            display: block;
+                            padding: 15px;
+                            text-decoration: none;
+                            color: #fafafc;
+                            font-size: 15px;
+                            font-weight: 600;
+                            letter-spacing: 1px;
+                        }
         
                         &:hover {
                             background-color: var(--link-hover-color);
@@ -437,18 +441,23 @@
 
                         button {
                             position: absolute;
-                            bottom: 0;
+                            bottom: 25px;
+                            left: 57px;
                             background-color: var(--link-color);
-                            color: #fafafc;
-                            font-size: 15px;
-                            font-weight: 600;
-                            padding: 15px;
                             border: none;
-                            letter-spacing: 1px;
                             width: fit-content;
                             transition: all 0.5s ease;
-                            cursor: pointer;
-            
+
+                            a {
+                                display: block;
+                                padding: 15px;
+                                text-decoration: none;
+                                color: #fafafc;
+                                font-size: 15px;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                            }
+        
                             &:hover {
                                 background-color: var(--link-hover-color);
                             }
@@ -898,10 +907,10 @@
                             &.error {
                                 display: block;
                                 background-color: #F8D7DA;
-                                color: #ff0000ba;
+                                color: #842029;
 
                                 div:last-child {
-                                    background-color: #ff0000ba;
+                                    background-color: #842029;
                                 }
                             }
                         }

@@ -288,16 +288,19 @@
   left: 0;
   margin: 50px;
   background-color: var(--link-color);
-  color: #fafafc;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 15px;
   border: none;
-  letter-spacing: 1px;
   width: -moz-fit-content;
   width: fit-content;
   transition: all 0.5s ease;
-  cursor: pointer;
+}
+.main-container main #home .big-card-container .big-card button a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #fafafc;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 .main-container main #home .big-card-container .big-card button:hover {
   background-color: var(--link-hover-color);
@@ -366,18 +369,22 @@
 }
 .main-container main #about .big-card-container .big-card div:last-child button {
   position: absolute;
-  bottom: 0;
+  bottom: 25px;
+  left: 57px;
   background-color: var(--link-color);
-  color: #fafafc;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 15px;
   border: none;
-  letter-spacing: 1px;
   width: -moz-fit-content;
   width: fit-content;
   transition: all 0.5s ease;
-  cursor: pointer;
+}
+.main-container main #about .big-card-container .big-card div:last-child button a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #fafafc;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 .main-container main #about .big-card-container .big-card div:last-child button:hover {
   background-color: var(--link-hover-color);
@@ -747,10 +754,10 @@
 .main-container main #contact .big-card #contact-wrapper #form-wrapper #status.error {
   display: block;
   background-color: #F8D7DA;
-  color: rgba(255, 0, 0, 0.7294117647);
+  color: #842029;
 }
 .main-container main #contact .big-card #contact-wrapper #form-wrapper #status.error div:last-child {
-  background-color: rgba(255, 0, 0, 0.7294117647);
+  background-color: #842029;
 }
 .main-container main #copyright .big-card-container {
   padding-bottom: 0;
