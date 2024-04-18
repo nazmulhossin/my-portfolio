@@ -237,7 +237,7 @@
 }
 .main-container main section .card-container .card .card-wrapper a:hover {
   color: var(--link-hover-color);
-  text-shadow: 0 0 0.7px var(--link-hover-color);
+  text-shadow: 0 0 1px var(--link-hover-color);
 }
 .main-container main section .card-container .card .card-wrapper a:hover span {
   margin-left: 7px;
@@ -710,6 +710,47 @@
 }
 .main-container main #contact .big-card #contact-wrapper #form-wrapper form button:hover {
   background-color: var(--link-hover-color);
+}
+.main-container main #contact .big-card #contact-wrapper #form-wrapper #status {
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  z-index: 1;
+  border-radius: 3px;
+  display: none;
+}
+.main-container main #contact .big-card #contact-wrapper #form-wrapper #status div:first-child {
+  padding: 10px 15px;
+  font-weight: 500;
+}
+.main-container main #contact .big-card #contact-wrapper #form-wrapper #status div:last-child {
+  height: 3px;
+  border-radius: 5px;
+  animation: timer 3s linear;
+}
+@keyframes timer {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+.main-container main #contact .big-card #contact-wrapper #form-wrapper #status.success {
+  display: block;
+  background-color: #D1E7DD;
+  color: green;
+}
+.main-container main #contact .big-card #contact-wrapper #form-wrapper #status.success div:last-child {
+  background-color: green;
+}
+.main-container main #contact .big-card #contact-wrapper #form-wrapper #status.error {
+  display: block;
+  background-color: #F8D7DA;
+  color: rgba(255, 0, 0, 0.7294117647);
+}
+.main-container main #contact .big-card #contact-wrapper #form-wrapper #status.error div:last-child {
+  background-color: rgba(255, 0, 0, 0.7294117647);
 }
 .main-container main #copyright .big-card-container {
   padding-bottom: 0;

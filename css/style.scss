@@ -277,7 +277,7 @@
         
                             &:hover {
                                 color: var(--link-hover-color);
-                                text-shadow: 0 0 0.7px var(--link-hover-color);
+                                text-shadow: 0 0 1px var(--link-hover-color);
         
                                 span {
                                     margin-left: 7px;
@@ -798,6 +798,7 @@
 
                     #form-wrapper {
                         width: 55%;
+
                         form {
                             .form-group {
                                 position: relative;
@@ -856,6 +857,51 @@
                 
                                 &:hover {
                                     background-color: var(--link-hover-color);
+                                }
+                            }
+                        }
+
+                        #status {
+                            position: fixed;
+                            top: 25px;
+                            right: 20px;
+                            z-index: 1;
+                            border-radius: 3px;
+                            display: none;
+
+                            div:first-child {
+                                padding: 10px 15px;
+                                font-weight: 500;
+                            }
+
+                            div:last-child {
+                                height: 3px;
+                                border-radius: 5px;
+                                animation: timer 3s linear;
+                            }
+
+                            @keyframes timer {
+                                0% { margin-left: 0; }
+                                100% { margin-left: 100%; }
+                            }
+                            
+                            &.success {
+                                display: block;
+                                background-color: #D1E7DD;
+                                color: green;
+
+                                div:last-child {
+                                    background-color: green;
+                                }
+                            }
+
+                            &.error {
+                                display: block;
+                                background-color: #F8D7DA;
+                                color: #ff0000ba;
+
+                                div:last-child {
+                                    background-color: #ff0000ba;
                                 }
                             }
                         }

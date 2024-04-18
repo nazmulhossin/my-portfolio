@@ -85,6 +85,54 @@ fetch('https://alfa-leetcode-api.onrender.com/nazmul_hossin/contest')
 
 
 
+/* Connect 'Contact Me' form with email through formspree*/
+window.addEventListener("DOMContentLoaded", function () {
+    var form = document.getElementById("contact-form");
+    var statusDiv = document.getElementById("show-status");
+  
+    // Success and Error functions for after the form is submitted
+    function success() {
+        form.reset();
+        document.getElementById("status").classList.add("success");
+        document.getElementById("show-status").innerHTML = "Message sent successfully!";
+        setTimeout(() => {
+            document.getElementById("status").classList.remove("success")
+        }, 3000);
+    }
+  
+    function error() {
+        document.getElementById("status").classList.add("error");
+        document.getElementById("show-status").innerHTML = "Oops! There was a problem.";
+        setTimeout(() => {
+            document.getElementById("status").classList.remove("error")
+        }, 3000);
+    }
+  
+    // handle the form submission event
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    });
+});
+  
+// helper function for sending an AJAX request
+function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState !== XMLHttpRequest.DONE) return;
+        if(xhr.status === 200)
+            success(xhr.response, xhr.responseType);
+        else 
+            error(xhr.status, xhr.response, xhr.responseType);
+      
+    };
+    xhr.send(data);
+}
+
+
 
 /* Get current year for copyright section*/
 const date = new Date();
