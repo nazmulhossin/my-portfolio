@@ -13,6 +13,8 @@
     --light-paragraph-text-color: #707070;
     --link-color: #069c7a;
     --link-hover-color: #00BC91;
+    --padding-15px: 15px;
+    --padding-30px: 30px;
 }
 
 *{
@@ -21,10 +23,16 @@
     box-sizing: border-box;
 }
 
+header#mobile-top-bar {
+    background-color: #20202a;
+    -webkit-box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
+    box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
+}
+
 .main-container {
     background-color: var(--dark-body-background-color);
     font-family: "Poppins", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.6px;
     padding: 15px 0 15px 40px;
     height: 100vh;
@@ -36,6 +44,18 @@
     aside {
         width: 300px;
         height: 100%;
+
+        #sidebar-show-hide-button {
+            i {
+                color: var(--dark-paragraph-text-color);
+                cursor: pointer;
+                transition: all 0.5s ease-in-out;
+            }
+
+            &:hover i {
+                color: var(--dark-heading-text-color);
+            }
+        }
 
         #profile {
             background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
@@ -67,7 +87,6 @@
 
                 span {
                     color: var(--link-hover-color);
-                    font-weight: 400;
                     font-size: 14px;
                 }
             }
@@ -83,7 +102,6 @@
                     li {
                         font-size: 13px;
                         color: var(--dark-paragraph-text-color);
-                        font-weight: 400;
                         display: flex;
                         margin: 6px 0;
 
@@ -147,7 +165,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 0 40px;
 
                 li {
                     a {
@@ -173,7 +190,6 @@
         padding: 0 15px;
         padding-right: 45px;
         font-size: 15px;
-        font-weight: 400;
         color: var(--dark-paragraph-text-color);
         position: relative;
 
@@ -182,7 +198,7 @@
                 color: var(--dark-heading-text-color);
                 font-size: 20px;
                 font-weight: 300;
-                padding: 15px;
+                padding: var(--padding-15px);
 
                 span {
                     font-weight: 600;
@@ -191,12 +207,13 @@
             }
 
             .big-card-container {
-                padding: 15px;
+                padding: var(--padding-15px);
 
                 .big-card {
                     background: var(--dark-card-background-color);
                     -webkit-box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
                     box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
+                    padding: var(--padding-30px);
                 }
             }
 
@@ -206,13 +223,13 @@
 
                 .card {
                     flex: 0 0 33.33333%;
-                    padding: 15px;
+                    padding: var(--padding-15px);
     
                     .card-wrapper {
                         background: var(--dark-card-background-color);                  
                         -webkit-box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
                         box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
-                        padding: 30px;
+                        padding: var(--padding-30px);
                         height: 100%;
                         display: flex;
                         flex-direction: column;
@@ -323,12 +340,10 @@
     
                     h1 {
                         position: absolute;
-                        top: 0;
-                        left: 0;
+                        top: 70px;
+                        left: 50px;
                         font-size: 35px;
                         font-weight: 800;
-                        margin-top: 70px;
-                        margin-left: 50px;
     
                         span {
                             color: var(--link-hover-color);
@@ -337,9 +352,8 @@
                     
                     button {
                         position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        margin: 50px;
+                        bottom: 50px;
+                        left: 50px;
                         background-color: var(--link-color);
                         border: none;
                         width: fit-content;
@@ -393,7 +407,6 @@
         #about {
             .big-card-container {
                 .big-card {
-                    padding: 30px;
                     display: flex;
                     justify-content: space-between;
 
@@ -441,8 +454,7 @@
 
                         button {
                             position: absolute;
-                            bottom: 25px;
-                            left: 57px;
+                            bottom: 0;
                             background-color: var(--link-color);
                             border: none;
                             width: fit-content;
@@ -469,7 +481,7 @@
 
         #education {
             .timeline-container {
-                padding: 15px;
+                padding: var(--padding-15px);
 
                 .timeline {
                     position: relative;
@@ -496,7 +508,7 @@
                             background: var(--dark-card-background-color);
                             -webkit-box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
                             box-shadow: 0 2px 7px 0 rgba(15, 15, 20, 0.2);
-                            padding: 30px;
+                            padding: var(--padding-30px);
                             margin-bottom: 30px;
                             display: flex;
                             flex-direction: column;
@@ -751,8 +763,6 @@
 
         #contact {
             .big-card {
-                padding: 30px;
-
                 p {
                     text-align: center;
                     margin-bottom: 30px;
@@ -838,7 +848,6 @@
                                     border: none;
                                     color: var(--dark-heading-text-color);
                                     font-size: 16px;
-                                    font-weight: 400;
         
                                     &:focus {
                                         outline: none;
@@ -1066,252 +1075,273 @@
             background-color: #ffffff;
         }
     }
+
+    #blur {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(30, 30, 40, 0.88);
+        z-index: 2;
+        display: none;
+
+        &.add-blur {
+            display: block;
+        }
+    }
 }
 
-.main-container.light-theme {
-    background-color: var(--light-body-background-color);
+body.light-theme {
+    header#mobile-top-bar {
+        background-color: #f3f3f3;
+    }
 
-    aside {
-        #profile {
-            background: #fefefe;
-            
-            #name_img {
-                span {
-                    color: var(--light-heading-text-color);
+    .main-container {
+        background-color: var(--light-body-background-color);
+
+        aside {
+            #profile {
+                background: #fefefe;
+                
+                #name_img {
+                    span {
+                        color: var(--light-heading-text-color);
+                    }
+                }
+
+                #user-info {
+                    border-top: 1px solid #e6e6e6;
+
+                    ul {
+                        li {
+                            color: var(--light-paragraph-text-color);
+
+                            .flex-1 {
+                                color: var(--light-heading-text-color);
+                            }
+                        }
+                    }
                 }
             }
 
-            #user-info {
-                border-top: 1px solid #e6e6e6;
+            nav {
+                background-color: #f3f3f3;
+                
+                ul {
+                    li {
+                        a {
+                            color: rgba(0, 0, 0, 0.9);
+
+                            &:hover {
+                                color: var(--link-hover-color);
+                            }
+
+                            &.active {
+                                color: var(--link-hover-color);
+                            }
+                        }  
+                    }
+                }
+            }
+            
+            #accounts {
+                background: #fefefe;
 
                 ul {
                     li {
-                        color: var(--light-paragraph-text-color);
+                        a {
+                            color: rgba(0, 0, 0, 0.9);
 
-                        .flex-1 {
-                            color: var(--light-heading-text-color);
+                            &:hover {
+                                color: var(--link-hover-color);
+                            }
                         }
                     }
-                }
-            }
-        }
-
-        nav {
-            background-color: #f3f3f3;
-            
-            ul {
-                li {
-                    a {
-                        color: rgba(0, 0, 0, 0.9);
-
-                        &:hover {
-                            color: var(--link-hover-color);
-                        }
-
-                        &.active {
-                            color: var(--link-hover-color);
-                        }
-                    }  
                 }
             }
         }
         
-        #accounts {
-            background: #fefefe;
+        main {
+            background-color: var(--light-main-background-color);
+            color: var(--light-paragraph-text-color);
 
-            ul {
-                li {
-                    a {
-                        color: rgba(0, 0, 0, 0.9);
-
-                        &:hover {
-                            color: var(--link-hover-color);
-                        }
-                    }
+            section {
+                h2 {
+                    color: var(--light-heading-text-color);
                 }
-            }
-        }
-    }
-    
-    main {
-        background-color: var(--light-main-background-color);
-        color: var(--light-paragraph-text-color);
 
-        section {
-            h2 {
-                color: var(--light-heading-text-color);
-            }
-
-            .big-card-container {
-                .big-card {
-                    background: var(--light-card-background-color);
-                }
-            }
-
-            .card-container {
-                .card {
-                    .card-wrapper {
+                .big-card-container {
+                    .big-card {
                         background: var(--light-card-background-color);
-    
-                        h4 {
+                    }
+                }
+
+                .card-container {
+                    .card {
+                        .card-wrapper {
+                            background: var(--light-card-background-color);
+        
+                            h4 {
+                                color: var(--light-heading-text-color);
+                            }
+            
+                            &:hover .summary {
+                                color: var(--light-heading-text-color);
+                                opacity: 0.9;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #home {
+                .big-card-container {
+                    .big-card {
+                        background: var(--light-card-background-color);
+                        color: var(--light-heading-text-color);
+                    }
+                }
+
+                #overview {
+                    p {
+                        color: var(--light-heading-text-color);
+                    }
+                }
+            }
+
+            #about {
+                .big-card-container {
+                    .big-card {
+                        div:last-child {
                             color: var(--light-heading-text-color);
+
+                            p {
+                                border-bottom: 1px solid #e6e6e6;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #education {
+                .timeline-container {
+                    .timeline {
+                        .timeline-item {
+                            .timeline-mark {
+                                background-color: var(--light-main-background-color);
+                            }
+                            
+                            .timeline-content {
+                                background: var(--light-card-background-color);
+
+                                .timeline-content-header {
+                                    div:first-child {
+                                        h4 {
+                                            color: var(--light-heading-text-color);
+                                        }
+                                    }
+
+                                    .duration .date{
+                                        background-color: #d6d6d6;
+                                        color: var(--light-paragraph-text-color);
+                                    }
+                                }
+                                
+                                &::before {
+                                    background-color: var(--light-card-background-color);
+                                }
+                            }
+
+                            &:hover {
+                                .timeline-mark {
+                                    span {
+                                        background-color: var(--light-main-background-color);
+                                    }
+                                }
+                            }
                         }
         
-                        &:hover .summary {
-                            color: var(--light-heading-text-color);
-                            opacity: 0.9;
+                        &::before {
+                            background-color: var(--light-body-background-color);
                         }
                     }
                 }
             }
-        }
 
-        #home {
-            .big-card-container {
-                .big-card {
-                    background: var(--light-card-background-color);
-                    color: var(--light-heading-text-color);
-                }
-            }
-
-            #overview {
-                p {
-                    color: var(--light-heading-text-color);
-                }
-            }
-        }
-
-        #about {
-            .big-card-container {
-                .big-card {
-                    div:last-child {
-                        color: var(--light-heading-text-color);
-
-                        p {
-                            border-bottom: 1px solid #e6e6e6;
+            #programming {
+                .card-container .card .card-wrapper {
+                    .logo.atcoder svg {
+                        .cls-1 {
+                            fill: #fff;
                         }
-                    }
-                }
-            }
-        }
 
-        #education {
-            .timeline-container {
-                .timeline {
-                    .timeline-item {
-                        .timeline-mark {
-                            background-color: var(--light-main-background-color);
+                        .cls-2{
+                            fill: #231815;
                         }
                         
-                        .timeline-content {
-                            background: var(--light-card-background-color);
+                    }
+                }
+            }
 
-                            .timeline-content-header {
-                                div:first-child {
-                                    h4 {
+            #achievements {
+                .card-container .card .card-wrapper {
+                    .logo {
+                        &.ncpc_ju img {
+                            background-color: transparent;
+                        }
+
+                        &.cpu img {
+                            background-color: transparent;
+                        }
+                    } 
+                }
+            }
+
+            #contact {
+                .big-card {
+                    #contact-wrapper {
+                        #contact-info {
+                            .contact-group div h4 {
+                                color: var(--light-heading-text-color);
+                            }
+                        }
+
+                        #form-wrapper {
+                            form {
+                                .form-group {
+                                    i {
+                                        background: #c0c0c0;
+                                    }
+            
+                                    input, textarea {
+                                        background: #e3e3e3;
                                         color: var(--light-heading-text-color);
                                     }
                                 }
-
-                                .duration .date{
-                                    background-color: #d6d6d6;
-                                    color: var(--light-paragraph-text-color);
+                                
+                                button {
+                                    color: #fafafc;
                                 }
-                            }
-                            
-                            &::before {
-                                background-color: var(--light-card-background-color);
-                            }
-                        }
-
-                        &:hover {
-                            .timeline-mark {
-                                span {
-                                    background-color: var(--light-main-background-color);
-                                }
-                            }
-                        }
-                    }
-    
-                    &::before {
-                        background-color: var(--light-body-background-color);
-                    }
-                }
-            }
-        }
-
-        #programming {
-            .card-container .card .card-wrapper {
-                .logo.atcoder svg {
-                    .cls-1 {
-                        fill: #fff;
-                    }
-
-                    .cls-2{
-                        fill: #231815;
-                    }
-                    
-                }
-            }
-        }
-
-        #achievements {
-            .card-container .card .card-wrapper {
-                .logo {
-                    &.ncpc_ju img {
-                        background-color: transparent;
-                    }
-
-                    &.cpu img {
-                        background-color: transparent;
-                    }
-                } 
-            }
-        }
-
-        #contact {
-            .big-card {
-                #contact-wrapper {
-                    #contact-info {
-                        .contact-group div h4 {
-                            color: var(--light-heading-text-color);
-                        }
-                    }
-
-                    #form-wrapper {
-                        form {
-                            .form-group {
-                                i {
-                                    background: #c0c0c0;
-                                }
-        
-                                input, textarea {
-                                    background: #e3e3e3;
-                                    color: var(--light-heading-text-color);
-                                }
-                            }
-                            
-                            button {
-                                color: #fafafc;
                             }
                         }
                     }
                 }
             }
+
+            #hider {
+                background-color: var(--light-body-background-color);
+            }
         }
 
-        #hider {
-            background-color: var(--light-body-background-color);
-        }
-    }
-
-    #theme {
-        #theme-wrapper {
-            color: #fafafc;
-        }
-        
-        &.show-them-window {
-            background-color: #191923;
+        #theme {
+            #theme-wrapper {
+                color: #fafafc;
+            }
+            
+            &.show-them-window {
+                background-color: #191923;
+            }
         }
     }
 }
