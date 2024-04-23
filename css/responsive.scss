@@ -186,10 +186,10 @@
             }
     
             #home {
-                height: 50%;
+                height: 40%;
 
                 .big-card-container {
-                    height: 83%;
+                    height: 80%;
                     padding: 0;
 
                     .big-card {        
@@ -540,7 +540,7 @@
             }
 
             #profile {
-                padding: 0 20px;
+                padding: 0 var(--padding-30px);
     
                 #name_img {
                     img {
@@ -575,14 +575,14 @@
             }
     
             nav {
-                padding: 10px 20px;
+                padding: 10px var(--padding-30px);
     
                 ul {
                     li {
                         a {
                             font-size: 13.5px;
                             font-weight: 500;
-                            padding: 5px 20px;
+                            padding: 5px var(--padding-30px);
     
                             i {
                                 margin-right: 13px;
@@ -593,7 +593,7 @@
             }
             
             #accounts {
-                padding: 0 20px;
+                padding: 0 var(--padding-30px);
     
                 ul {
                     li {
@@ -665,10 +665,10 @@
             }
     
             #home {
-                height: 55%;
+                height: 45%;
 
                 .big-card-container {
-                    height: 83%;
+                    height: 80%;
                     padding: 0;
                     overflow: hidden;
 
@@ -960,36 +960,168 @@
 
 /* Small devices (portrait tablets and large phones, 690px and up) */
 @media only screen and (min-width: 690px) {
+    :root {
+        --padding-15px: 12px;
+        --padding-30px: 23px;
+    }
+
     .main-container {
-        main {
-            #home {
-                .big-card-container {
-                    .big-card {        
-                        img {
-                            width: 210px;
-                            right: -105px;
-                        }
+        aside {
+            left: -300px;
+            width: 300px;
+
+            #profile {
+                padding: 0 var(--padding-30px);
+    
+                #name_img {
+                    img {
+                        height: 100px;
+                        width: 100px;
+                        margin-top: 20px;
+                    }
+        
+                    span {
+                        font-size: 18px;
                     }
                 }
-
-                #overview {
-                    p {
-                        font-size: 13px;
-                        font-weight: 500;
-                        
-                        .counter {                        
-                            font-size: 23px;                                                 
+    
+                #textTyping {
+                    span {
+                        font-size: 14px;
+                    }
+                }
+    
+                #user-info {
+                    margin-top: 20px;
+    
+                    ul {
+                        li {
+                            font-size: 13px;
+                            margin: 6px 0;
                         }
                     }
                 }
             }
+    
+            nav {
+                padding: 20px;
+    
+                ul {
+                    li {
+                        a {
+                            font-size: 15px;
+                        }  
+                    }
+                }
+            }
             
+            #accounts {
+                padding: 0 var(--padding-30px);
+    
+                ul {
+                    li {
+                        a {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        main {
+            font-size: 14px;
+    
+            section {
+                h2 {
+                    font-size: 19px;
+                    padding: var(--padding-15px);
+                }
+    
+                .big-card-container {
+                    padding: var(--padding-15px);
+
+                    .big-card {
+                        padding: var(--padding-30px);
+                    }
+                }
+    
+                .card-container {
+                    .card {
+                        padding: var(--padding-15px);
+        
+                        .card-wrapper {
+                            padding: var(--padding-30px);
+        
+                            h4 {
+                                font-size: 15px;
+                            }
+            
+                            a {
+                                font-size: 13px;
+                
+                                span {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #home {
+                height: 50%;
+
+                .big-card-container {
+                    height: 80%;
+
+                    .big-card {        
+                        h1 {
+                            top: var(--padding-30px);
+                            left: var(--padding-30px);
+                            font-size: 20px;
+                        }
+                        
+                        button {
+                            bottom: var(--padding-30px);
+                            left: var(--padding-30px);
+    
+                            a {
+                                padding: 12px;
+                                font-size: 13px;
+                            }
+                        }
+        
+                        img {
+                            width: 220px;
+                            right: -110px;
+                        }
+                    }
+                }
+    
+                #overview {
+                    padding: 0 var(--padding-15px);
+                    
+                    p {
+                        font-size: 13.5px;
+                        
+                        .counter {                        
+                            font-size: 25px;                                                 
+                        }
+                    }
+                }
+            }
+    
             #education {
                 .timeline-container {
+                    padding: var(--padding-15px);
+    
                     .timeline {
                         .timeline-item {                          
                             .timeline-content {
-                                .timeline-content-header {   
+                                padding: var(--padding-30px);
+    
+                                .timeline-content-header {
+                                    
                                     div:first-child {
                                         h4 {
                                             font-size: 15px;
@@ -1010,425 +1142,18 @@
                     }
                 }
             }
-        }
-    }
-}
-
-  
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-} 
-  
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .main-container {
-        padding: 15px 0 15px 15px;
-
-        .column {
-            float: left;
-        }
-    
-        aside {
-            width: 300px;
-    
-            #profile {
-                height: 41.5%;
-                padding: 0 30px;
-    
-                #name_img {
-                    img {
-                        height: 100px;
-                        width: 100px;
-                        margin-top: 20px;
-                        margin-bottom: 5px;
-                    }
-        
-                    span {
-                        font-size: 18px;
-                        font-weight: 500;
-                    }
-                }
-    
-                #textTyping {
-                    span {
-                        font-size: 14px;
-                    }
-                }
-    
-                #user-info {
-                    margin-top: 20px;
-                    padding-top: 5px;
-    
-                    ul {
-                        li {
-                            font-size: 13px;
-                            margin: 6px 0;
-                        }
-                    }
-                }
-            }
-    
-            nav {
-                padding: 20px;
-                height: 52%;
-    
-                ul {
-                    li {
-                        a {
-                            font-size: 15px;
-                            font-weight: 500;
-                            padding: 5px 20px;
-    
-                            i {
-                                margin-right: 13px;
-                            }
-                        }  
-                    }
-                }
-            }
-            
-            #accounts {
-                padding: 0 30px;
-                height: 6.5%;
-    
-                ul {
-                    padding: 0 40px;
-    
-                    li {
-                        a {
-                            font-size: 22px;
-                        }
-                    }
-                }
-            }
-        }
-        
-        main {
-            width: calc(100% - 300px);
-            padding: 0 15px;
-            padding-right: 45px;
-            font-size: 15px;
-    
-            section {
-                h2 {
-                    font-size: 20px;
-                    font-weight: 300;
-                    padding: 15px;
-    
-                    span {
-                        font-weight: 600;
-                    }
-                }
-    
-                .big-card-container {
-                    padding: 15px;
-                }
-    
-                .card-container {
-                    .card {
-                        flex: 0 0 33.33333%;
-                        padding: 15px;
-        
-                        .card-wrapper {
-                            padding: 30px;
-    
-                            .logo {
-                                svg, img {
-                                    height: 70px;
-                                }
-            
-                                img {
-                                    border-radius: 10px;
-                                }
-            
-                                &.toph img {
-                                    padding: 10px 5px;
-                                }
-                            }
-        
-                            h4 {
-                                font-size: 16.5px;
-                                font-weight: 500;
-                                margin-bottom: 15px;
-                            }
-    
-                            .summary {
-                                margin-bottom: 15px;
-                                line-height: 1.5;
-                                
-                                b {
-                                    font-weight: 600;
-                                }
-                            }
-            
-                            a {
-                                font-weight: 600;
-                                font-size: 14px;
-                
-                                span {
-                                    margin-left: 4px;
-                                    font-size: 16px;
-                                }
-            
-                                &:hover {
-                                    span {
-                                        margin-left: 7px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-    
-            #home {    
-                .big-card-container {
-                    height: 84.5%;
-    
-                    .big-card {        
-                        h1 {
-                            top: 70px;
-                            left: 50px;
-                            font-size: 35px;
-                            font-weight: 800;
-                        }
-                        
-                        button {
-                            position: absolute;
-                            bottom: 50px;
-                            left: 50px;
-    
-                            a {
-                                padding: 15px;
-                                font-size: 15px;
-                                font-weight: 600;
-                            }
-                        }
-        
-                        img {
-                            width: 400px;
-                            right: -205px;
-                        }
-                    }
-                }
-    
-                #overview {
-                    margin-top: 1.5%;
-                    padding: 0 25px;
-                    
-                    p {
-                        font-size: 16px;
-                        font-weight: 600;
-                        
-                        .counter {                        
-                            font-size: 30px;                                                 
-                        }
-                    }
-                }
-            }
-    
-            #about {
-                .big-card-container {
-                    .big-card {
-                        padding: 30px;
-    
-                        div:first-child {
-                            width: 60%;
-                            gap: 15px;
-    
-                            h3 {
-                                font-size: 28px;
-                            }
-                        }
-    
-                        div:last-child {
-                            width: 33%;
-    
-                            p {
-                                padding: 12px 0;
-    
-                                span {
-                                    font-weight: 600;
-                                }
-                            }
-    
-                            button {
-                                a {
-                                    padding: 15px;
-                                    font-size: 15px;
-                                    font-weight: 600;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-    
-            #education {
-                .timeline-container {
-                    padding: 15px;
-    
-                    .timeline {
-                        .timeline-item {
-                            .timeline-mark {
-                                top: 8px;
-                                left: 0;
-                                width: 15px;
-                                height: 15px;
-                                border: solid 3px var(--link-hover-color);
-                            }
-                            
-                            .timeline-content {
-                                margin-left: 45px;
-                                padding: 30px;
-                                margin-bottom: 30px;
-    
-                                .timeline-content-header {
-                                    margin-bottom: 15px;
-                                    
-                                    div:first-child {
-                                        h4 {
-                                            font-size: 18px;
-                                            font-weight: 600;
-                                        }
-    
-                                        p {
-                                            font-size: 17px;
-                                        }
-                                    }
-    
-                                    .duration .date{
-                                        padding: 5px 15px;
-                                        border-radius: 20px;
-                                    }
-                                }
-    
-                                .institution-summary {
-                                    a {
-                                        margin-left: 20px;
-    
-                                        img {
-                                            width: 80px;
-                                        }
-                                    }
-                                }
-                                
-                                &::before {
-                                    content: ''; 
-                                    height: 10px;
-                                    width: 10px;
-                                    top: 11px;
-                                    left: -5px;
-                                }
-                            }
-    
-                            &:hover {
-                                .timeline-mark {
-                                    &::before {
-                                        animation: pulse 1s ease-out infinite;
-                                    }
-        
-                                    @keyframes pulse {
-                                        100% {
-                                            transform: scale(2.6);
-                                            opacity: 0;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-        
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            top: 10px;
-                            left: 5px;
-                            height: calc(100% - 10px);
-                            width: 5px;
-                        }
-                    }
-                }
-            }
     
             #skills {
                 .skill-category {
                     h3 {
-                        padding: 0 15px;
-                        font-size: 17px;
-                        font-weight: 600;
+                        padding: 0 12px;
+                        font-size: 15.5px;
                     }
     
                     .card-container {
                         .card {
-                            flex: 0 0 25%;
-    
                             .card-wrapper {
-                                padding: 18px;
-    
-                                .logo {
-                                    height: 45px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-    
-            #programming {
-                .card-container .card .card-wrapper {
-                    .logo {
-                        &.toph img {
-                            padding: 10px 5px;
-                        }
-                    } 
-                }
-            }
-    
-            #achievements {
-                .card-container .card .card-wrapper {
-                    h4 {
-                        height: 50px;
-                    }
-    
-                    .logo {
-                        &.ncpc_ju img {
-                            padding: 7px;
-                        }
-    
-                        &.cpu img {
-                            padding: 3px;
-                            border-radius: 5px;
-                        }
-                    } 
-                }
-            }
-    
-            #projects {
-                .card-container {
-                    .card {
-                        flex: 0 0 50%;
-    
-                        .card-wrapper {
-                            .project-screenshots {
-                                margin-bottom: 20px;
-                            }
-    
-                            .project-screenshot {
-                                height: 250px;
-                                margin-bottom: 20px;
-                            }
-    
-                            .summary {
-                                flex-direction: column;
-                                gap: 10px;
-                            }
-    
-                            .links {
-                                a:nth-child(2) {
-                                    width: 105px;
-                                }
+                                padding: 12px;
                             }
                         }
                     }
@@ -1437,85 +1162,16 @@
     
             #contact {
                 .big-card {
-                    padding: 30px;
-    
-                    p {
-                        margin-bottom: 30px;
-                    }
-    
                     #contact-wrapper {
-                        #contact-info {
-                            width: 45%;
-    
-                            .contact-group {
-                                margin-bottom: 10px;
-                                gap: 20px;
-    
-                                div:first-child {
-                                    width: 45px;
-                                    height: 45px;
-                                    border: 2px solid var(--link-hover-color);
-    
-                                    i {
-                                        font-size: 18px;
-                                    }
-                                }
-    
-                                div:last-child {
-                                    h4 {
-                                        font-size: 18px;
-                                        font-weight: 400;
-                                    }
-                                }
-                            }
-                        }
-    
                         #form-wrapper {
-                            width: 55%;
-    
                             form {
                                 .form-group {
-                                    margin-bottom: 30px;
-            
-                                    i {
-                                        height: 50px;
-                                        width: 50px;
-                                        padding: 0 15px;
-                                        font-size: 20px;
-                                        line-height: 50px;
-                                    }
-            
-                                    input, textarea {
-                                        height: 50px;
-                                        padding: 0 15px 0 65px;
-                                        font-size: 16px;
-                                    }
-            
-                                    textarea {
-                                        min-height: 130px;
-                                        padding-top: 15px;
-                                    }
+                                    margin-bottom: var(--padding-30px);
                                 }
                                 
                                 button {
-                                    font-size: 15px;
-                                    font-weight: 600;
-                                    padding: 10px 30px;
-                                }
-                            }
-    
-                            #status {
-                                top: 25px;
-                                right: 20px;
-    
-                                div:first-child {
-                                    padding: 10px 15px;
-                                    font-weight: 500;
-                                }
-    
-                                div:last-child {
-                                    height: 3px;
-                                    border-radius: 5px;
+                                    font-size: 13px;
+                                    padding: 8px 20px;
                                 }
                             }
                         }
@@ -1525,27 +1181,216 @@
     
             #copyright {
                 .big-card-container {
+                    padding-bottom: 12px;
+
                     .big-card {
-                        font-weight: 500;
-                        padding: 15px;
+                        padding: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+  
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    :root {
+        --padding-15px: 13px;
+        --padding-30px: 25px;
+    }
+
+    header#mobile-top-bar {
+        height: 45px;
+    }
+
+    .main-container {
+        main {
+            font-size: 14px;
+    
+            section {
+                h2 {
+                    padding: var(--padding-15px);
+                }
+    
+                .big-card-container {
+                    padding: var(--padding-15px);
+
+                    .big-card {
+                        padding: var(--padding-30px);
+                    }
+                }
+    
+                .card-container {
+                    .card {
+                        flex: 0 0 50%;
+                        padding: var(--padding-15px);
+        
+                        .card-wrapper {
+                            padding: var(--padding-30px);
+    
+                            .logo {
+                                svg, img {
+                                    height: 55px;
+                                }
+                            }
+        
+                            h4 {
+                                font-size: 15px;
+                            }
+            
+                            a {
+                                font-size: 13px;
+                
+                                span {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
                     }
                 }
             }
     
-            #hider {
-                width: 30px;
-                height: calc(100vh - 30px);
-                top: 15px;
-                right: 17px;
+            #home {
+                height: 50%;
+
+                .big-card-container {
+                    .big-card {        
+                        h1 {
+                            top: var(--padding-30px);
+                            left: var(--padding-30px);
+                            font-size: 22px;
+                        }
+                        
+                        button {
+                            bottom: var(--padding-30px);
+                            left: var(--padding-30px);
+    
+                            a {
+                                padding: 12px;
+                                font-size: 13px;
+                                font-weight: 600;
+                            }
+                        }
+        
+                        img {
+                            width: 230px;
+                            right: -115px;
+                        }
+                    }
+                }
+    
+                #overview {
+                    padding: 0 var(--padding-15px);
+                    
+                    p {
+                        font-size: 14px;
+                        
+                        .counter {                        
+                            font-size: 23px;                                                 
+                        }
+                    }
+                }
+            }
+    
+            #education {
+                .timeline-container {
+                    padding: var(--padding-15px);
+    
+                    .timeline {
+                        .timeline-item {                          
+                            .timeline-content {
+                                padding: var(--padding-30px);
+                                margin-bottom: var(--padding-30px);
+    
+                                .timeline-content-header {
+                                    margin-bottom: 13px;
+                                    
+                                    div:first-child {
+                                        h4 {
+                                            font-size: 16px;
+                                        }
+    
+                                        p {
+                                            font-size: 15px;
+                                        }
+                                    }
+    
+                                    .duration .date{
+                                        padding: 5px 12px;
+                                        font-size: 13.5px;
+                                    }
+                                }
+    
+                                .institution-summary {
+                                    a {
+                                        margin-left: 15px;
+    
+                                        img {
+                                            width: 65px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #skills {
+                .skill-category {
+                    h3 {
+                        padding: 0 var(--padding-15px);
+                    }
+                }
+            }
+    
+            #projects {
+                .card-container {
+                    .card {    
+                        .card-wrapper {
+                            .project-screenshot {
+                                height: 320px;
+                            }
+    
+                            .links {
+                                a:nth-child(2) {
+                                    width: 110px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #contact {
+                .big-card {
+                    #contact-wrapper {    
+                        #form-wrapper {
+                            form {
+                                .form-group {
+                                    margin-bottom: var(--padding-30px);
+            
+                                    input, textarea {
+                                        font-size: 14px;
+                                    }
+
+                                    textarea {
+                                        min-height: 130px;
+                                    }
+                                }
+                                
+                                button {
+                                    font-size: 14px;
+                                    padding: 9px 24px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-    
-        &::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-    
+
         #theme {
             width: 170px;
             top: 45%;
@@ -1606,14 +1451,58 @@
 } 
   
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .main-container {
+        main {    
+            section {    
+                .card-container {
+                    .card {
+                        flex: 0 0 33.33333%;
+                    }
+                }
+            }
+    
+            #skills {
+                .skill-category {
+                    .card-container {
+                        .card {
+                            .card-wrapper {
+                                .logo {
+                                    height: 35px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #projects {
+                .card-container {
+                    .card {
+                        flex: 0 0 50%;
+    
+                        .card-wrapper {
+                            .project-screenshot {
+                                height: 210px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
 }
 
 
-/* Extra large devices (large laptops and desktops, 1440px and up) */
-@media only screen and (min-width: 1440px) {
+/* Extra large devices (large laptops and desktops, 1300px and up) */
+@media only screen and (min-width: 1300px) {
 
 }
 
