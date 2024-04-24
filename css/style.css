@@ -790,10 +790,11 @@ header#mobile-top-bar {
   width: 170px;
   position: fixed;
   top: 45%;
-  right: -153px;
+  right: -170px;
   transition: all 0.5s ease-out;
 }
 .main-container #theme #theme-wrapper {
+  background-color: #ffffff;
   color: #000000;
   padding: 15px 20px;
   position: relative;
@@ -890,12 +891,11 @@ header#mobile-top-bar {
   color: #ffffff;
 }
 .main-container #theme #theme-wrapper #theme-mode div button:last-child {
-  background-color: #f0f2f5;
+  background-color: #e9e9e9;
   color: #FFC107;
 }
 .main-container #theme.show-them-window {
-  right: 15px;
-  background-color: #ffffff;
+  right: 0;
 }
 .main-container #blur {
   top: 0;
@@ -1044,7 +1044,5 @@ body.light-theme .main-container main #hider {
 }
 body.light-theme .main-container #theme #theme-wrapper {
   color: #fafafc;
-}
-body.light-theme .main-container #theme.show-them-window {
   background-color: #191923;
 }

@@ -1,8 +1,8 @@
-/* Extra small devices (phones, 599px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (max-width: 400px) {
     :root {
-        --padding-15px: 1.5vw;
-        --padding-30px: 2.8vw;
+        --padding-15px: 1.3vw;
+        --padding-30px: 2.5vw;
     }
 
     header#mobile-top-bar {
@@ -21,22 +21,511 @@
         aside {
             position: absolute;
             top: 0;
-            left: -45vw;
+            left: -70vw;
             height: 100vh;
-            width: 45vw;
+            width: 70vw;
             z-index: 5;
             transition: all 0.5s ease-in-out;
 
             #sidebar-show-hide-button {
                 position: absolute;
-                height: 2.7vh;
-                width: 2.7vh;
+                height: 2.6vh;
+                width: 2.6vh;
                 top: 1.3vh;
-                right: -7vw;
+                right: -10vw;
                 transition: all 0.5s ease-in-out;
 
                 i {
-                    font-size: 2.7vh;
+                    font-size: 2.6vh;
+
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+
+            &.show-sidebar {
+                left: 0;
+
+                #sidebar-show-hide-button {
+                    right: 3vw;
+    
+                    i {
+                        &:first-child {
+                            display: none;
+                        }
+
+                        &:last-child {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            #profile {
+                padding: 0 4vw;
+    
+                #name_img {
+                    img {
+                        height: 25vw;
+                        width: 25vw;
+                        margin-top: 15px;
+                    }
+        
+                    span {
+                        font-size: 4vw;
+                    }
+                }
+    
+                #textTyping {
+                    span {
+                        font-size: 3vw;
+                    }
+                }
+    
+                #user-info {
+                    margin-top: 2vh;
+
+                    ul {
+                        li {
+                            font-size: 2.8vw;
+                        }
+                    }
+                }
+            }
+    
+            nav {
+                padding: 2vh 5vw;
+    
+                ul {
+                    li {
+                        a {
+                            font-size: 3vw;
+                            padding: 5px 3vw;
+    
+                            i {
+                                margin-right: 2.1vw;
+                            }
+                        }  
+                    }
+                }
+            }
+            
+            #accounts {
+                padding: 0 4vw;
+    
+                ul {
+                    li {
+                        a {
+                            font-size: 5vw;
+                        }
+                    }
+                }
+            }
+        }
+        
+        main {
+            width: 100%;
+            padding: 0;
+            font-size: 2.8vw;
+    
+            section {
+                h2 {
+                    font-size: 3.7vw;
+                    padding: var(--padding-15px);
+                }
+    
+                .big-card-container {
+                    padding: var(--padding-15px);
+
+                    .big-card {
+                        padding: var(--padding-30px);
+                    }
+                }
+    
+                .card-container {
+                    .card {
+                        flex: 0 0 50%;
+                        padding: var(--padding-15px);
+        
+                        .card-wrapper {
+                            padding: var(--padding-30px);
+    
+                            .logo {
+                                svg, img {
+                                    height: 8vw;
+                                }
+            
+                                img {
+                                    border-radius: 3px;
+                                }
+                            }
+        
+                            h4 {
+                                font-size: 2.4vw;
+                                margin-bottom: 1.5vw;
+                            }
+    
+                            .summary {
+                                margin-bottom: 1.5vw;
+                            }
+            
+                            a {
+                                font-size: 2.1vw;
+                
+                                span {
+                                    font-size: 2.3vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #home {
+                height: 35%;
+
+                .big-card-container {
+                    height: 83%;
+                    padding: 0;
+
+                    .big-card {        
+                        h1 {
+                            top: var(--padding-30px);
+                            left: var(--padding-30px);
+                            font-size: 3.5vw;
+                        }
+                        
+                        button {
+                            bottom: var(--padding-30px);
+                            left: var(--padding-30px);
+    
+                            a {
+                                padding: 1.7vw;
+                                font-size: 2.5vw;
+                            }
+                        }
+        
+                        img {
+                            width: 40vw;
+                            right: -19.7vw;
+                        }
+                    }
+                }
+    
+                #overview {
+                    padding: 0 1.5vw;
+                    
+                    p {
+                        font-size: 1.8vw;
+                        font-weight: 400;
+                        
+                        .counter {                        
+                            font-size: 3.3vw;
+                            font-weight: 600;                                               
+                        }
+                    }
+                }
+            }
+    
+            #about {
+                .big-card-container {
+                    .big-card {
+                        div:first-child {
+                            width: 100%;
+                            gap: 10px;
+    
+                            h3 {
+                                font-size: 3.3vw;
+                            }
+                        }
+    
+                        div:last-child {
+                            display: none;
+                        }
+                    }
+                }
+            }
+    
+            #education {
+                .timeline-container {
+                    padding: var(--padding-15px);
+    
+                    .timeline {
+                        .timeline-item {
+                            .timeline-mark {
+                                top: 9px;
+                                left: 0;
+                                width: 12px;
+                                height: 12px;
+                                border-width: 2px;
+                            }
+
+                            .timeline-content {
+                                margin-left: 22px;
+                                padding: var(--padding-30px);
+                                margin-bottom: 15px;
+    
+                                .timeline-content-header {
+                                    margin-bottom: 12px;
+                                    
+                                    div:first-child {
+                                        h4 {
+                                            font-size: 2.7vw;
+                                        }
+    
+                                        p {
+                                            font-size: 2.2vw;
+                                        }
+                                    }
+    
+                                    .duration .date{
+                                        padding: 5px 7px;
+                                        border-radius: 15px;
+                                        font-size: 1.8vw;
+                                    }
+                                }
+    
+                                .institution-summary {
+                                    a {
+                                        margin-left: 10px;
+    
+                                        img {
+                                            width: 9vw;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &::before {
+                            left: 4px;
+                            width: 4px;
+                        }
+                    }
+                }
+            }
+    
+            #skills {
+                .skill-category {
+                    h3 {
+                        padding: 0 var(--padding-15px);
+                        font-size: 2.4vw;
+                    }
+    
+                    .card-container {
+                        .card {
+                            flex: 0 0 25%;
+    
+                            .card-wrapper {
+                                padding: 1.5vw;
+    
+                                .logo {
+                                    height: 5vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #programming {
+                .card-container .card .card-wrapper {
+                    .logo {
+                        &.toph img {
+                            padding: 7px 3px;
+                        }
+                    } 
+                }
+            }
+    
+            #achievements {
+                .card-container .card .card-wrapper {
+                    h4 {
+                        height: 30px;
+                    }
+
+                    .logo {
+                        &.ncpc_ju img {
+                            padding: 5px;
+                        }
+    
+                        &.cpu img {
+                            padding: 2px;
+                            border-radius: 3px;
+                        }
+                    } 
+                }
+            }
+    
+            #projects {
+                .card-container {
+                    .card {
+                        flex: 0 0 100%;
+    
+                        .card-wrapper {
+                            .project-screenshot {
+                                height: 25vh
+                            }
+    
+                            .links {
+                                a:nth-child(2) {
+                                    width: 18vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #contact {
+                .big-card {
+                    #contact-wrapper {
+                        flex-direction: column;
+
+                        #contact-info {
+                            display: none;
+                        }
+    
+                        #form-wrapper {
+                            width: 100%;
+    
+                            form {
+                                .form-group {
+                                    margin-bottom: 2.8vw;
+            
+                                    i {
+                                        height: 6.5vw;
+                                        width: 6.5vw;
+                                        padding: 0 1.5vw;
+                                        font-size: 3vw;
+                                        line-height: 6.5vw;
+                                    }
+            
+                                    input, textarea {
+                                        height: 6.5vw;
+                                        padding: 0 1.3vw 0 7.5vw;
+                                        font-size: 2.2vw;
+                                    }
+            
+                                    textarea {
+                                        min-height: 13vh;
+                                        padding-top: 1.8vw;
+                                    }
+                                }
+                                
+                                button {
+                                    padding: 1.5vw 3vw;
+                                    font-size: 2.5vw;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #copyright {
+                .big-card-container {
+                    padding-bottom: 10px;
+
+                    .big-card {
+                        padding: 10px;
+                    }
+                }
+            }
+    
+            #hider {
+                display: none;
+            }
+        }
+
+        #theme {
+            width: 150px;
+            top: 41%;
+            right: -150px;
+    
+            #theme-wrapper {
+                padding: 10px 17px;
+    
+                #theme-changing-button {
+                    left: -34.5px;
+    
+                    div {
+                        padding: 5px 9px;
+                        border-radius: 5px 0 0 5px;
+                    }
+                }
+    
+                h5 {
+                    font-size: 14px;
+                }
+    
+                #color-switcher {
+                    margin-bottom: 5px;
+    
+                    div {
+                        .color {
+                            width: 20px;
+                            height: 20px;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+    
+                #theme-mode {
+                    div {
+                        button {
+                            font-size: 17px;
+                            padding: 3px 15px;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Extra small devices (phones, 400px and up) */
+@media only screen and (min-width: 400px) {
+    :root {
+        --padding-15px: 1.4vw;
+        --padding-30px: 2.6vw;
+    }
+
+    header#mobile-top-bar {
+        height: 5vh;
+    }
+
+    .main-container {
+        padding: 0;
+        padding-top: 3px;
+        height: calc(100vh - 5vh);
+
+        .column {
+            float: none;
+        }
+    
+        aside {
+            position: absolute;
+            top: 0;
+            left: -250px;
+            height: 100vh;
+            width: 250px;
+            z-index: 5;
+            transition: all 0.5s ease-in-out;
+
+            #sidebar-show-hide-button {
+                position: absolute;
+                height: 2.6vh;
+                width: 2.6vh;
+                top: 1.3vh;
+                right: -10vw;
+                transition: all 0.5s ease-in-out;
+
+                i {
+                    font-size: 2.6vh;
 
                     &:last-child {
                         display: none;
@@ -129,7 +618,7 @@
         main {
             width: 100%;
             padding: 0;
-            font-size: 2.2vw;
+            font-size: 2.8vw;
     
             section {
                 h2 {
@@ -350,12 +839,12 @@
     
                         .card-wrapper {
                             .project-screenshot {
-                                height: 250px;
+                                height: 25vh
                             }
     
                             .links {
                                 a:nth-child(2) {
-                                    width: 17vw;
+                                    width: 18vw;
                                 }
                             }
                         }

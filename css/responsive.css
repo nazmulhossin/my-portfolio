@@ -1,8 +1,8 @@
-/* Extra small devices (phones, 599px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (max-width: 400px) {
   :root {
-    --padding-15px: 1.5vw;
-    --padding-30px: 2.8vw;
+    --padding-15px: 1.3vw;
+    --padding-30px: 2.5vw;
   }
   header#mobile-top-bar {
     height: 5vh;
@@ -18,22 +18,343 @@
   .main-container aside {
     position: absolute;
     top: 0;
-    left: -45vw;
+    left: -70vw;
     height: 100vh;
-    width: 45vw;
+    width: 70vw;
     z-index: 5;
     transition: all 0.5s ease-in-out;
   }
   .main-container aside #sidebar-show-hide-button {
     position: absolute;
-    height: 2.7vh;
-    width: 2.7vh;
+    height: 2.6vh;
+    width: 2.6vh;
     top: 1.3vh;
-    right: -7vw;
+    right: -10vw;
     transition: all 0.5s ease-in-out;
   }
   .main-container aside #sidebar-show-hide-button i {
-    font-size: 2.7vh;
+    font-size: 2.6vh;
+  }
+  .main-container aside #sidebar-show-hide-button i:last-child {
+    display: none;
+  }
+  .main-container aside.show-sidebar {
+    left: 0;
+  }
+  .main-container aside.show-sidebar #sidebar-show-hide-button {
+    right: 3vw;
+  }
+  .main-container aside.show-sidebar #sidebar-show-hide-button i:first-child {
+    display: none;
+  }
+  .main-container aside.show-sidebar #sidebar-show-hide-button i:last-child {
+    display: block;
+  }
+  .main-container aside #profile {
+    padding: 0 4vw;
+  }
+  .main-container aside #profile #name_img img {
+    height: 25vw;
+    width: 25vw;
+    margin-top: 15px;
+  }
+  .main-container aside #profile #name_img span {
+    font-size: 4vw;
+  }
+  .main-container aside #profile #textTyping span {
+    font-size: 3vw;
+  }
+  .main-container aside #profile #user-info {
+    margin-top: 2vh;
+  }
+  .main-container aside #profile #user-info ul li {
+    font-size: 2.8vw;
+  }
+  .main-container aside nav {
+    padding: 2vh 5vw;
+  }
+  .main-container aside nav ul li a {
+    font-size: 3vw;
+    padding: 5px 3vw;
+  }
+  .main-container aside nav ul li a i {
+    margin-right: 2.1vw;
+  }
+  .main-container aside #accounts {
+    padding: 0 4vw;
+  }
+  .main-container aside #accounts ul li a {
+    font-size: 5vw;
+  }
+  .main-container main {
+    width: 100%;
+    padding: 0;
+    font-size: 2.8vw;
+  }
+  .main-container main section h2 {
+    font-size: 3.7vw;
+    padding: var(--padding-15px);
+  }
+  .main-container main section .big-card-container {
+    padding: var(--padding-15px);
+  }
+  .main-container main section .big-card-container .big-card {
+    padding: var(--padding-30px);
+  }
+  .main-container main section .card-container .card {
+    flex: 0 0 50%;
+    padding: var(--padding-15px);
+  }
+  .main-container main section .card-container .card .card-wrapper {
+    padding: var(--padding-30px);
+  }
+  .main-container main section .card-container .card .card-wrapper .logo svg, .main-container main section .card-container .card .card-wrapper .logo img {
+    height: 8vw;
+  }
+  .main-container main section .card-container .card .card-wrapper .logo img {
+    border-radius: 3px;
+  }
+  .main-container main section .card-container .card .card-wrapper h4 {
+    font-size: 2.4vw;
+    margin-bottom: 1.5vw;
+  }
+  .main-container main section .card-container .card .card-wrapper .summary {
+    margin-bottom: 1.5vw;
+  }
+  .main-container main section .card-container .card .card-wrapper a {
+    font-size: 2.1vw;
+  }
+  .main-container main section .card-container .card .card-wrapper a span {
+    font-size: 2.3vw;
+  }
+  .main-container main #home {
+    height: 35%;
+  }
+  .main-container main #home .big-card-container {
+    height: 83%;
+    padding: 0;
+  }
+  .main-container main #home .big-card-container .big-card h1 {
+    top: var(--padding-30px);
+    left: var(--padding-30px);
+    font-size: 3.5vw;
+  }
+  .main-container main #home .big-card-container .big-card button {
+    bottom: var(--padding-30px);
+    left: var(--padding-30px);
+  }
+  .main-container main #home .big-card-container .big-card button a {
+    padding: 1.7vw;
+    font-size: 2.5vw;
+  }
+  .main-container main #home .big-card-container .big-card img {
+    width: 40vw;
+    right: -19.7vw;
+  }
+  .main-container main #home #overview {
+    padding: 0 1.5vw;
+  }
+  .main-container main #home #overview p {
+    font-size: 1.8vw;
+    font-weight: 400;
+  }
+  .main-container main #home #overview p .counter {
+    font-size: 3.3vw;
+    font-weight: 600;
+  }
+  .main-container main #about .big-card-container .big-card div:first-child {
+    width: 100%;
+    gap: 10px;
+  }
+  .main-container main #about .big-card-container .big-card div:first-child h3 {
+    font-size: 3.3vw;
+  }
+  .main-container main #about .big-card-container .big-card div:last-child {
+    display: none;
+  }
+  .main-container main #education .timeline-container {
+    padding: var(--padding-15px);
+  }
+  .main-container main #education .timeline-container .timeline .timeline-item .timeline-mark {
+    top: 9px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+  }
+  .main-container main #education .timeline-container .timeline .timeline-item .timeline-content {
+    margin-left: 22px;
+    padding: var(--padding-30px);
+    margin-bottom: 15px;
+  }
+  .main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header {
+    margin-bottom: 12px;
+  }
+  .main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header div:first-child h4 {
+    font-size: 2.7vw;
+  }
+  .main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header div:first-child p {
+    font-size: 2.2vw;
+  }
+  .main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header .duration .date {
+    padding: 5px 7px;
+    border-radius: 15px;
+    font-size: 1.8vw;
+  }
+  .main-container main #education .timeline-container .timeline .timeline-item .timeline-content .institution-summary a {
+    margin-left: 10px;
+  }
+  .main-container main #education .timeline-container .timeline .timeline-item .timeline-content .institution-summary a img {
+    width: 9vw;
+  }
+  .main-container main #education .timeline-container .timeline::before {
+    left: 4px;
+    width: 4px;
+  }
+  .main-container main #skills .skill-category h3 {
+    padding: 0 var(--padding-15px);
+    font-size: 2.4vw;
+  }
+  .main-container main #skills .skill-category .card-container .card {
+    flex: 0 0 25%;
+  }
+  .main-container main #skills .skill-category .card-container .card .card-wrapper {
+    padding: 1.5vw;
+  }
+  .main-container main #skills .skill-category .card-container .card .card-wrapper .logo {
+    height: 5vw;
+  }
+  .main-container main #programming .card-container .card .card-wrapper .logo.toph img {
+    padding: 7px 3px;
+  }
+  .main-container main #achievements .card-container .card .card-wrapper h4 {
+    height: 30px;
+  }
+  .main-container main #achievements .card-container .card .card-wrapper .logo.ncpc_ju img {
+    padding: 5px;
+  }
+  .main-container main #achievements .card-container .card .card-wrapper .logo.cpu img {
+    padding: 2px;
+    border-radius: 3px;
+  }
+  .main-container main #projects .card-container .card {
+    flex: 0 0 100%;
+  }
+  .main-container main #projects .card-container .card .card-wrapper .project-screenshot {
+    height: 25vh;
+  }
+  .main-container main #projects .card-container .card .card-wrapper .links a:nth-child(2) {
+    width: 18vw;
+  }
+  .main-container main #contact .big-card #contact-wrapper {
+    flex-direction: column;
+  }
+  .main-container main #contact .big-card #contact-wrapper #contact-info {
+    display: none;
+  }
+  .main-container main #contact .big-card #contact-wrapper #form-wrapper {
+    width: 100%;
+  }
+  .main-container main #contact .big-card #contact-wrapper #form-wrapper form .form-group {
+    margin-bottom: 2.8vw;
+  }
+  .main-container main #contact .big-card #contact-wrapper #form-wrapper form .form-group i {
+    height: 6.5vw;
+    width: 6.5vw;
+    padding: 0 1.5vw;
+    font-size: 3vw;
+    line-height: 6.5vw;
+  }
+  .main-container main #contact .big-card #contact-wrapper #form-wrapper form .form-group input, .main-container main #contact .big-card #contact-wrapper #form-wrapper form .form-group textarea {
+    height: 6.5vw;
+    padding: 0 1.3vw 0 7.5vw;
+    font-size: 2.2vw;
+  }
+  .main-container main #contact .big-card #contact-wrapper #form-wrapper form .form-group textarea {
+    min-height: 13vh;
+    padding-top: 1.8vw;
+  }
+  .main-container main #contact .big-card #contact-wrapper #form-wrapper form button {
+    padding: 1.5vw 3vw;
+    font-size: 2.5vw;
+  }
+  .main-container main #copyright .big-card-container {
+    padding-bottom: 10px;
+  }
+  .main-container main #copyright .big-card-container .big-card {
+    padding: 10px;
+  }
+  .main-container main #hider {
+    display: none;
+  }
+  .main-container #theme {
+    width: 150px;
+    top: 41%;
+    right: -150px;
+  }
+  .main-container #theme #theme-wrapper {
+    padding: 10px 17px;
+  }
+  .main-container #theme #theme-wrapper #theme-changing-button {
+    left: -34.5px;
+  }
+  .main-container #theme #theme-wrapper #theme-changing-button div {
+    padding: 5px 9px;
+    border-radius: 5px 0 0 5px;
+  }
+  .main-container #theme #theme-wrapper h5 {
+    font-size: 14px;
+  }
+  .main-container #theme #theme-wrapper #color-switcher {
+    margin-bottom: 5px;
+  }
+  .main-container #theme #theme-wrapper #color-switcher div .color {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+  }
+  .main-container #theme #theme-wrapper #theme-mode div button {
+    font-size: 17px;
+    padding: 3px 15px;
+    border-radius: 3px;
+  }
+}
+/* Extra small devices (phones, 400px and up) */
+@media only screen and (min-width: 400px) {
+  :root {
+    --padding-15px: 1.4vw;
+    --padding-30px: 2.6vw;
+  }
+  header#mobile-top-bar {
+    height: 5vh;
+  }
+  .main-container {
+    padding: 0;
+    padding-top: 3px;
+    height: 95vh;
+  }
+  .main-container .column {
+    float: none;
+  }
+  .main-container aside {
+    position: absolute;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    width: 250px;
+    z-index: 5;
+    transition: all 0.5s ease-in-out;
+  }
+  .main-container aside #sidebar-show-hide-button {
+    position: absolute;
+    height: 2.6vh;
+    width: 2.6vh;
+    top: 1.3vh;
+    right: -10vw;
+    transition: all 0.5s ease-in-out;
+  }
+  .main-container aside #sidebar-show-hide-button i {
+    font-size: 2.6vh;
   }
   .main-container aside #sidebar-show-hide-button i:last-child {
     display: none;
@@ -91,7 +412,7 @@
   .main-container main {
     width: 100%;
     padding: 0;
-    font-size: 2.2vw;
+    font-size: 2.8vw;
   }
   .main-container main section h2 {
     font-size: 3vw;
@@ -229,10 +550,10 @@
     flex: 0 0 100%;
   }
   .main-container main #projects .card-container .card .card-wrapper .project-screenshot {
-    height: 250px;
+    height: 25vh;
   }
   .main-container main #projects .card-container .card .card-wrapper .links a:nth-child(2) {
-    width: 17vw;
+    width: 18vw;
   }
   .main-container main #contact .big-card #contact-wrapper {
     flex-direction: column;
