@@ -54,8 +54,8 @@
     padding: 0 4vw;
   }
   .main-container aside #profile #name_img img {
-    height: 25vw;
-    width: 25vw;
+    height: 24.5vw;
+    width: 24.5vw;
     margin-top: 15px;
   }
   .main-container aside #profile #name_img span {
@@ -89,7 +89,7 @@
   .main-container main {
     width: 100%;
     padding: 0;
-    font-size: 2.8vw;
+    font-size: 2.75vw;
   }
   .main-container main section h2 {
     font-size: 3.7vw;
@@ -322,8 +322,8 @@
 /* Extra small devices (phones, 400px and up) */
 @media only screen and (min-width: 400px) {
   :root {
-    --padding-15px: 1.4vw;
-    --padding-30px: 2.6vw;
+    --padding-15px: 1.3vw;
+    --padding-30px: 2.5vw;
   }
   header#mobile-top-bar {
     height: 5vh;
@@ -350,7 +350,7 @@
     height: 2.6vh;
     width: 2.6vh;
     top: 1.3vh;
-    right: -10vw;
+    right: -40px;
     transition: all 0.5s ease-in-out;
   }
   .main-container aside #sidebar-show-hide-button i {
@@ -363,7 +363,7 @@
     left: 0;
   }
   .main-container aside.show-sidebar #sidebar-show-hide-button {
-    right: 3vw;
+    right: 15px;
   }
   .main-container aside.show-sidebar #sidebar-show-hide-button i:first-child {
     display: none;
@@ -372,47 +372,45 @@
     display: block;
   }
   .main-container aside #profile {
-    height: 43.5%;
-    padding: 0 3vw;
+    padding: 0 15px;
   }
   .main-container aside #profile #name_img img {
-    height: 14vw;
-    width: 14vw;
-    margin-top: 2vh;
+    height: 100px;
+    width: 100px;
+    margin-top: 15px;
   }
   .main-container aside #profile #name_img span {
-    font-size: 2.8vw;
+    font-size: 16px;
   }
   .main-container aside #profile #textTyping span {
-    font-size: 2.2vw;
+    font-size: 13px;
   }
   .main-container aside #profile #user-info {
     margin-top: 2vh;
   }
   .main-container aside #profile #user-info ul li {
-    font-size: 2vw;
+    font-size: 12px;
   }
   .main-container aside nav {
-    padding: 1vw 4vw;
-    height: 50%;
+    padding: 10px 15px;
   }
   .main-container aside nav ul li a {
-    font-size: 2.2vw;
-    padding: 5px 3vw;
+    font-size: 13px;
+    padding: 5px 15px;
   }
   .main-container aside nav ul li a i {
-    margin-right: 2.1vw;
+    margin-right: 12px;
   }
   .main-container aside #accounts {
-    padding: 0 4vw;
+    padding: 0 15px;
   }
   .main-container aside #accounts ul li a {
-    font-size: 3.5vw;
+    font-size: 20px;
   }
   .main-container main {
     width: 100%;
     padding: 0;
-    font-size: 2.8vw;
+    font-size: 2.3vw;
   }
   .main-container main section h2 {
     font-size: 3vw;
@@ -468,12 +466,12 @@
     left: 3vw;
   }
   .main-container main #home .big-card-container .big-card button a {
-    padding: 1.5vw;
-    font-size: 1.9vw;
+    padding: 1.8vw;
+    font-size: 2.1vw;
   }
   .main-container main #home .big-card-container .big-card img {
-    width: 31vw;
-    right: -15.5vw;
+    width: 200px;
+    right: -100px;
   }
   .main-container main #home #overview {
     padding: 0 1.5vw;
@@ -484,6 +482,7 @@
   }
   .main-container main #home #overview p .counter {
     font-size: 3.3vw;
+    font-weight: 500;
   }
   .main-container main #about .big-card-container .big-card div:first-child {
     width: 100%;
@@ -507,10 +506,10 @@
     margin-bottom: 12px;
   }
   .main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header div:first-child h4 {
-    font-size: 2.3vw;
+    font-size: 2.4vw;
   }
   .main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header div:first-child p {
-    font-size: 2vw;
+    font-size: 2.2vw;
   }
   .main-container main #education .timeline-container .timeline .timeline-item .timeline-content .timeline-content-header .duration .date {
     padding: 5px 7px;
@@ -524,7 +523,7 @@
     width: 9vw;
   }
   .main-container main #skills .skill-category h3 {
-    padding: 0 1.5vw;
+    padding: 0 var(--padding-15px);
     font-size: 2.4vw;
   }
   .main-container main #skills .skill-category .card-container .card {
@@ -584,8 +583,8 @@
     padding-top: 1.8vw;
   }
   .main-container main #contact .big-card #contact-wrapper #form-wrapper form button {
-    font-size: 2vw;
-    padding: 1.4vw 3vw;
+    font-size: 2.1vw;
+    padding: 1.5vw 3vw;
   }
   .main-container main #copyright .big-card-container {
     padding-bottom: 10px;
@@ -599,16 +598,16 @@
   .main-container #theme {
     width: 150px;
     top: 42%;
-    right: -133px;
+    right: -150px;
   }
   .main-container #theme #theme-wrapper {
     padding: 10px 17px;
   }
   .main-container #theme #theme-wrapper #theme-changing-button {
-    left: -32.5px;
+    left: -34.5px;
   }
   .main-container #theme #theme-wrapper #theme-changing-button div {
-    padding: 5px 8px;
+    padding: 5px 9px;
     border-radius: 5px 0 0 5px;
   }
   .main-container #theme #theme-wrapper h5 {
@@ -626,9 +625,6 @@
     font-size: 17px;
     padding: 3px 15px;
     border-radius: 3px;
-  }
-  .main-container #theme.show-them-window {
-    right: 17px;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -898,7 +894,7 @@
   }
   .main-container main #contact .big-card #contact-wrapper #form-wrapper form .form-group textarea {
     min-height: 100px;
-    padding-top: 15px;
+    padding-top: 11px;
   }
   .main-container main #contact .big-card #contact-wrapper #form-wrapper form button {
     font-size: 12px;
@@ -916,7 +912,7 @@
   .main-container #theme {
     width: 170px;
     top: 45%;
-    right: -153px;
+    right: -170px;
   }
   .main-container #theme #theme-wrapper {
     padding: 13px 18px;
@@ -943,9 +939,6 @@
     font-size: 18px;
     padding: 3px 18px;
     border-radius: 3px;
-  }
-  .main-container #theme.show-them-window {
-    right: 15px;
   }
 }
 /* Small devices (portrait tablets and large phones, 690px and up) */
@@ -1129,7 +1122,7 @@
     font-size: 15px;
   }
   .main-container main #home {
-    height: 50%;
+    height: 60%;
   }
   .main-container main #home .big-card-container .big-card h1 {
     top: var(--padding-30px);
@@ -1146,8 +1139,8 @@
     font-weight: 600;
   }
   .main-container main #home .big-card-container .big-card img {
-    width: 230px;
-    right: -115px;
+    width: 250px;
+    right: -126px;
   }
   .main-container main #home #overview {
     padding: 0 var(--padding-15px);
@@ -1209,7 +1202,7 @@
   .main-container #theme {
     width: 170px;
     top: 45%;
-    right: -153px;
+    right: -170px;
   }
   .main-container #theme #theme-wrapper {
     padding: 15px 20px;
@@ -1245,8 +1238,24 @@
     padding: 5px 20px;
     border-radius: 5px;
   }
-  .main-container #theme.show-them-window {
-    right: 15px;
+}
+/* Medium devices (landscape tablets, 900px and up) */
+@media only screen and (min-width: 900px) {
+  .main-container main #home {
+    height: 70%;
+  }
+  .main-container main #home .big-card-container {
+    height: 83%;
+  }
+  .main-container main #home .big-card-container .big-card img {
+    width: 300px;
+    right: -150px;
+  }
+  .main-container main #projects .card-container .card {
+    flex: 0 0 50%;
+  }
+  .main-container main #projects .card-container .card .card-wrapper .project-screenshots, .main-container main #projects .card-container .card .card-wrapper .project-screenshot {
+    height: 200px;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1265,7 +1274,6 @@
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/* Extra large devices (large laptops and desktops, 1300px and up) */
 /* Extra large devices (large laptops and desktops, 1440px and up) */
 @media only screen and (min-width: 1530px) {
   .main-container {

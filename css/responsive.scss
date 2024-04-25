@@ -67,8 +67,8 @@
     
                 #name_img {
                     img {
-                        height: 25vw;
-                        width: 25vw;
+                        height: 24.5vw;
+                        width: 24.5vw;
                         margin-top: 15px;
                     }
         
@@ -127,7 +127,7 @@
         main {
             width: 100%;
             padding: 0;
-            font-size: 2.8vw;
+            font-size: 2.75vw;
     
             section {
                 h2 {
@@ -490,8 +490,8 @@
 /* Extra small devices (phones, 400px and up) */
 @media only screen and (min-width: 400px) {
     :root {
-        --padding-15px: 1.4vw;
-        --padding-30px: 2.6vw;
+        --padding-15px: 1.3vw;
+        --padding-30px: 2.5vw;
     }
 
     header#mobile-top-bar {
@@ -521,7 +521,7 @@
                 height: 2.6vh;
                 width: 2.6vh;
                 top: 1.3vh;
-                right: -10vw;
+                right: -40px;
                 transition: all 0.5s ease-in-out;
 
                 i {
@@ -537,7 +537,7 @@
                 left: 0;
 
                 #sidebar-show-hide-button {
-                    right: 3vw;
+                    right: 15px;
     
                     i {
                         &:first-child {
@@ -552,24 +552,23 @@
             }
 
             #profile {
-                height: 43.5%;
-                padding: 0 3vw;
+                padding: 0 15px;
     
                 #name_img {
                     img {
-                        height: 14vw;
-                        width: 14vw;
-                        margin-top: 2vh;
+                        height: 100px;
+                        width: 100px;
+                        margin-top: 15px;
                     }
         
                     span {
-                        font-size: 2.8vw;
+                        font-size: 16px;
                     }
                 }
     
                 #textTyping {
                     span {
-                        font-size: 2.2vw;
+                        font-size: 13px;
                     }
                 }
     
@@ -578,24 +577,23 @@
 
                     ul {
                         li {
-                            font-size: 2vw;
+                            font-size: 12px;
                         }
                     }
                 }
             }
     
             nav {
-                padding: 1vw 4vw;
-                height: 50%;
+                padding: 10px 15px;
     
                 ul {
                     li {
                         a {
-                            font-size: 2.2vw;
-                            padding: 5px 3vw;
+                            font-size: 13px;
+                            padding: 5px 15px;
     
                             i {
-                                margin-right: 2.1vw;
+                                margin-right: 12px;
                             }
                         }  
                     }
@@ -603,12 +601,12 @@
             }
             
             #accounts {
-                padding: 0 4vw;
+                padding: 0 15px;
     
                 ul {
                     li {
                         a {
-                            font-size: 3.5vw;
+                            font-size: 20px;
                         }
                     }
                 }
@@ -618,7 +616,7 @@
         main {
             width: 100%;
             padding: 0;
-            font-size: 2.8vw;
+            font-size: 2.3vw;
     
             section {
                 h2 {
@@ -693,14 +691,14 @@
                             left: 3vw;
     
                             a {
-                                padding: 1.5vw;
-                                font-size: 1.9vw;
+                                padding: 1.8vw;
+                                font-size: 2.1vw;
                             }
                         }
         
                         img {
-                            width: 31vw;
-                            right: -15.5vw;
+                            width: 200px;
+                            right: -100px;
                         }
                     }
                 }
@@ -713,7 +711,8 @@
                         font-weight: 400;
                         
                         .counter {                        
-                            font-size: 3.3vw;                                                 
+                            font-size: 3.3vw;
+                            font-weight: 500;       
                         }
                     }
                 }
@@ -754,11 +753,11 @@
                                     
                                     div:first-child {
                                         h4 {
-                                            font-size: 2.3vw;
+                                            font-size: 2.4vw;
                                         }
     
                                         p {
-                                            font-size: 2vw;
+                                            font-size: 2.2vw;
                                         }
                                     }
     
@@ -787,7 +786,7 @@
             #skills {
                 .skill-category {
                     h3 {
-                        padding: 0 1.5vw;
+                        padding: 0 var(--padding-15px);
                         font-size: 2.4vw;
                     }
     
@@ -839,7 +838,7 @@
     
                         .card-wrapper {
                             .project-screenshot {
-                                height: 25vh
+                                height: 25vh;
                             }
     
                             .links {
@@ -889,8 +888,8 @@
                                 }
                                 
                                 button {
-                                    font-size: 2vw;
-                                    padding: 1.4vw 3vw;
+                                    font-size: 2.1vw;
+                                    padding: 1.5vw 3vw;
                                 }
                             }
                         }
@@ -916,16 +915,16 @@
         #theme {
             width: 150px;
             top: 42%;
-            right: calc(-150px + 17px);
+            right: -150px;
     
             #theme-wrapper {
                 padding: 10px 17px;
     
                 #theme-changing-button {
-                    left: -32.5px;
+                    left: -34.5px;
     
                     div {
-                        padding: 5px 8px;
+                        padding: 5px 9px;
                         border-radius: 5px 0 0 5px;
                     }
                 }
@@ -955,10 +954,6 @@
                         }
                     }
                 }
-            }
-            
-            &.show-them-window {
-                right: 17px;
             }
         }
     }
@@ -1366,7 +1361,7 @@
             
                                     textarea {
                                         min-height: 100px;
-                                        padding-top: 15px;
+                                        padding-top: 11px;
                                     }
                                 }
                                 
@@ -1398,7 +1393,7 @@
         #theme {
             width: 170px;
             top: 45%;
-            right: calc(-170px + 17px);
+            right: -170px;
     
             #theme-wrapper {
                 padding: 13px 18px;
@@ -1437,10 +1432,6 @@
                         }
                     }
                 }
-            }
-            
-            &.show-them-window {
-                right: 15px;
             }
         }
     }
@@ -1741,7 +1732,7 @@
             }
     
             #home {
-                height: 50%;
+                height: 60%;
 
                 .big-card-container {
                     .big-card {        
@@ -1763,8 +1754,8 @@
                         }
         
                         img {
-                            width: 230px;
-                            right: -115px;
+                            width: 250px;
+                            right: -126px;
                         }
                     }
                 }
@@ -1883,7 +1874,7 @@
         #theme {
             width: 170px;
             top: 45%;
-            right: calc(-170px + 17px);
+            right: -170px;
     
             #theme-wrapper {
                 padding: 15px 20px;
@@ -1931,9 +1922,42 @@
                     }
                 }
             }
-            
-            &.show-them-window {
-                right: 15px;
+        }
+    }
+}
+
+
+/* Medium devices (landscape tablets, 900px and up) */
+@media only screen and (min-width: 900px) {
+    .main-container {
+        main {
+            #home {
+                height: 70%;
+
+                .big-card-container {
+                    height: 83%;
+
+                    .big-card {
+                        img {
+                            width: 300px;
+                            right: -150px;
+                        }
+                    }
+                }
+            }
+
+            #projects {
+                .card-container {
+                    .card {
+                        flex: 0 0 50%;
+
+                        .card-wrapper {
+                            .project-screenshots, .project-screenshot {
+                                height: 200px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -1986,12 +2010,6 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
-}
-
-
-/* Extra large devices (large laptops and desktops, 1300px and up) */
-@media only screen and (min-width: 1300px) {
 
 }
 
