@@ -208,7 +208,7 @@
         
                         img {
                             width: 40vw;
-                            right: -19.7vw;
+                            right: -20vw;
                         }
                     }
                 }
@@ -698,7 +698,7 @@
         
                         img {
                             width: 200px;
-                            right: -100px;
+                            right: -101px;
                         }
                     }
                 }
@@ -1732,7 +1732,7 @@
             }
     
             #home {
-                height: 60%;
+                height: 50%;
 
                 .big-card-container {
                     .big-card {        
@@ -1754,8 +1754,8 @@
                         }
         
                         img {
-                            width: 250px;
-                            right: -126px;
+                            width: 280px;
+                            right: -140px;
                         }
                     }
                 }
@@ -1880,10 +1880,10 @@
                 padding: 15px 20px;
     
                 #theme-changing-button {
-                    left: -40.5px;
+                    left: -39px;
     
                     div {
-                        padding: 9px 12px;
+                        padding: 9px 11.5px;
                         border-radius: 5px 0 0 5px;
                     }
                 }
@@ -1932,10 +1932,10 @@
     .main-container {
         main {
             #home {
-                height: 70%;
+                height: 45%;
 
                 .big-card-container {
-                    height: 83%;
+                    height: 85%;
 
                     .big-card {
                         img {
@@ -1975,7 +1975,7 @@
                     }
                 }
             }
-    
+
             #skills {
                 .skill-category {
                     .card-container {
@@ -2010,12 +2010,281 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    :root {
+        --padding-15px: 8px;
+        --padding-30px: 22px;
+    }
 
+    header#mobile-top-bar {
+        display: none;
+    }
+
+    .main-container {
+        padding: 15px 0 15px 10px;
+        height: 100vh;
+
+        .column {
+            float: left;
+        }
+    
+        aside {
+            position: static;
+            width: 280px;
+            height: 100%;
+
+            #sidebar-show-hide-button {
+                display: none;
+            }
+        }
+        
+        main {
+            width: calc(100% - 280px);
+            padding: 0 15px;
+            padding-right: 25px;
+            
+            section {
+                .card-container {
+                    .card {
+                        padding: var(--padding-15px);
+        
+                        .card-wrapper {
+                            padding: var(--padding-30px);
+            
+                            h4 {
+                                font-size: 14.5px;
+                            }
+
+                            .summary {
+                                margin-bottom: 15px;
+                                line-height: 1.5;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #home {
+                height: 75%;    
+                .big-card-container {
+                    padding: 0 var(--padding-15px);
+
+                    .big-card {        
+                        h1 {
+                            font-size: 27px;
+                            font-weight: 800;
+                        }
+                    }
+                }
+
+                #overview {
+                    padding: 0 var(--padding-15px);
+                    
+                    p {
+                        font-size: 15px;
+                        
+                        .counter {                        
+                            font-size: 25px;  
+                        }
+                    }
+                }
+            }
+    
+            #about {
+                .big-card-container {
+                    .big-card {
+                        padding: var(--padding-30px);
+    
+                        div:first-child {
+                            h3 {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #education {
+                .timeline-container {
+                    padding: var(--padding-15px);
+    
+                    .timeline {
+                        .timeline-item {
+                            .timeline-content {
+                                margin-left: 40px;
+                                padding: var(--padding-30px);
+    
+                                .timeline-content-header {
+                                    margin-bottom: 15px;
+                                    
+                                    div:first-child {
+                                        h4 {
+                                            font-size: 17px;
+                                            font-weight: 600;
+                                        }
+    
+                                        p {
+                                            font-size: 16px;
+                                        }
+                                    }
+    
+                                    .duration .date{
+                                        padding: 5px 15px;
+                                        border-radius: 20px;
+                                    }
+                                }
+    
+                                .institution-summary {
+                                    a {
+                                        margin-left: 20px;
+    
+                                        img {
+                                            width: 80px;
+                                        }
+                                    }
+                                }
+                                
+                                &::before {
+                                    content: ''; 
+                                    height: 10px;
+                                    width: 10px;
+                                    top: 11px;
+                                    left: -5px;
+                                }
+                            }
+    
+                            &:hover {
+                                .timeline-mark {
+                                    &::before {
+                                        animation: pulse 1s ease-out infinite;
+                                    }
+        
+                                    @keyframes pulse {
+                                        100% {
+                                            transform: scale(2.6);
+                                            opacity: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 10px;
+                            left: 5px;
+                            height: calc(100% - 10px);
+                            width: 5px;
+                        }
+                    }
+                }
+            }
+    
+            #skills {
+                .skill-category {
+                    h3 {
+                        padding: 0 var(--padding-15px);
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+    
+                    .card-container {
+                        .card {    
+                            .card-wrapper {
+                                padding: 16px;
+    
+                                .logo {
+                                    height: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #programming {
+                .card-container .card .card-wrapper {
+                    .logo {
+                        &.toph img {
+                            padding: 10px 5px;
+                        }
+                    } 
+                }
+            }
+    
+            #achievements {
+                .card-container .card .card-wrapper {
+                    h4 {
+                        height: 50px;
+                    }
+    
+                    .logo {
+                        &.ncpc_ju img {
+                            padding: 7px;
+                        }
+    
+                        &.cpu img {
+                            padding: 3px;
+                            border-radius: 5px;
+                        }
+                    } 
+                }
+            }
+    
+            #hider {
+                display: block;
+                width: 10px;
+                height: calc(100vh - 30px);
+                top: 15px;
+                right: 17px;
+            }
+        }
+
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    }
 }
 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1300px) {
+    .main-container {
+        main {
+            section {
+                .card-container {
+                    .card {
+                        .card-wrapper {
+                            h4 {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #home {
+                height: 90%;   
+
+                .big-card-container {
+                    height: 84.5%;
+                    padding: 0 var(--padding-15px);
+
+                    .big-card {        
+                        img {
+                            width: 350px;
+                            right: -177px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* Extra large devices (large laptops and desktops, 1440px and up) */
-@media only screen and (min-width: 1530px) {
+@media only screen and (min-width: 1450px) {
     .main-container {
         padding: 15px 0 15px 40px;
     
@@ -2172,14 +2441,16 @@
                 }
             }
     
-            #home {    
+            #home {
+                height: 98%;
+
                 .big-card-container {
-                    height: 84.5%;
+                    height: 86.5%;
     
                     .big-card {        
                         h1 {
-                            top: 70px;
-                            left: 50px;
+                            top: 60px;
+                            left: 40px;
                             font-size: 35px;
                             font-weight: 800;
                         }
@@ -2198,14 +2469,14 @@
         
                         img {
                             width: 400px;
-                            right: -205px;
+                            right: -202px;
                         }
                     }
                 }
     
                 #overview {
                     margin-top: 1.5%;
-                    padding: 0 25px;
+                    padding: 0 15px;
                     
                     p {
                         font-size: 16px;
@@ -2234,6 +2505,7 @@
     
                         div:last-child {
                             width: 33%;
+                            display: block;
     
                             p {
                                 padding: 12px 0;
@@ -2401,6 +2673,7 @@
     
                         .card-wrapper {
                             .project-screenshots {
+                                height: 250px;
                                 margin-bottom: 20px;
                             }
     
@@ -2433,8 +2706,11 @@
                     }
     
                     #contact-wrapper {
+                        flex-direction: row;
+
                         #contact-info {
                             width: 45%;
+                            display: block;
     
                             .contact-group {
                                 margin-bottom: 10px;
@@ -2532,16 +2808,16 @@
         #theme {
             width: 170px;
             top: 45%;
-            right: calc(-170px + 17px);
+            right: -170px;
     
             #theme-wrapper {
                 padding: 15px 20px;
     
                 #theme-changing-button {
-                    left: -40.5px;
+                    left: -39.5px;
     
                     div {
-                        padding: 9px 12px;
+                        padding: 9px 11.5px;
                         border-radius: 5px 0 0 5px;
                     }
                 }
@@ -2582,7 +2858,7 @@
             }
             
             &.show-them-window {
-                right: 15px;
+                right: 0;
             }
         }
     }
