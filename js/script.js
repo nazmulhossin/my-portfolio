@@ -1,3 +1,14 @@
+/* Hide loader */
+window.addEventListener("load", () => {
+    document.getElementById("preloader").classList.add("hideLoader");
+
+    // Set a short delay before starting the hide animation
+    setTimeout(function() {
+        document.getElementById("preloader").style.display = "none";
+    }, 1000);
+})
+
+
 /* Text Typing Animation */
 var typed5 = new Typed('#textAnimation', {
     strings: ['Competitive Programmer', 'Specialist in Codeforces', 'Web Developer'],
