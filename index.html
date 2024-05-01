@@ -13,7 +13,7 @@
     </header>
 
     <div class="main-container">
-        <aside class="column" id="sidebar">
+        <aside class="column col_left" id="sidebar">
             <div id="sidebar-show-hide-button">
                 <i class="fa-solid fa-bars-staggered"></i>
                 <i class="fa-solid fa-xmark"></i>
@@ -40,14 +40,14 @@
 
             <nav>
                 <ul>
-                    <li><a href="#home" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
-                    <li><a href="#about"><i class="fa-solid fa-user"></i> About Me</a></li>
-                    <li><a href="#education"><i class="fa-solid fa-graduation-cap"></i>Education</a></li>
-                    <li><a href="#skills"><i class="fa-solid fa-head-side-virus"></i> Skills</a></li>
-                    <li><a href="#programming"><i class="fa-solid fa-laptop-code"></i>Programming</a></li>
-                    <li><a href="#achievements"><i class="fa-solid fa-trophy"></i>Achievements</a></li>
-                    <li><a href="#projects"><i class="fa-solid fa-list-check"></i> Projects</a></li>
-                    <li><a href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+                    <li><a href="#homeLink" data-target="home" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="#aboutLink" data-target="about"><i class="fa-solid fa-user"></i> About Me</a></li>
+                    <li><a href="#educationLink" data-target="education"><i class="fa-solid fa-graduation-cap"></i>Education</a></li>
+                    <li><a href="#skillsLink" data-target="skills"><i class="fa-solid fa-head-side-virus"></i> Skills</a></li>
+                    <li><a href="#programmingLink" data-target="programming"><i class="fa-solid fa-laptop-code"></i>Programming</a></li>
+                    <li><a href="#achievementsLink" data-target="achievements"><i class="fa-solid fa-trophy"></i>Achievements</a></li>
+                    <li><a href="#projectsLink" data-target="projects"><i class="fa-solid fa-list-check"></i> Projects</a></li>
+                    <li><a href="#contactLink" data-target="contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
                 </ul>
             </nav>
 
@@ -63,7 +63,7 @@
         </aside>
     
         <main class="column" id="scrollable-content">
-            <section id="home" >
+            <section id="home">
                 <div class="big-card-container">
                     <div class="big-card">
                         <h1>Hi,<br> I am <span>Md. Nazmul Hossain</span>,<br> A Competitive Programmer<br> & Passionate Web Developer</h1>
@@ -983,8 +983,12 @@
         <div id="blur"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="js/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
     <script src="js/typed.min.js"></script>
     <script src="js/script.js"></script>
 </body>

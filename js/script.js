@@ -154,11 +154,26 @@ main.onscroll = () => {
         if(top >= offset && top < offset + height) {
             navLinks.forEach(link => {
                 link.classList.remove("active");
-                document.querySelector("nav ul li a[href*=" + sectionId + "]").classList.add("active");
+                document.querySelector("nav ul li a[href*=" + sectionId + "Link]").classList.add("active");
             });
         }
     });
 }
+
+// Smooth Scroll
+navLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        // Get the ID of the target div from the data-target attribute
+        const targetDiv = this.getAttribute('data-target');
+
+        // Get the div to be moved
+        const divToMove = document.getElementById(targetDiv);
+        
+        divToMove.scrollIntoView({behavior: "smooth"});
+    });
+});
 
 
 
@@ -249,49 +264,3 @@ sidebarLink.forEach(link => {
         blurDiv.classList.remove("add-blur");
     });
 });
-
-
-
-/* Smooth Scroll */
-// if(!document.querySelector("html").classList.contains('w-editor')){
-//     const lenis = new Lenis({
-//         wrapper: document.getElementById('scrollable-content'),
-//         duration: 2,
-//         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-//         direction: 'vertical', // vertical, horizontal
-//         gestureDirection: 'vertical', // vertical, horizontal, both
-//         smooth: true,
-//         smoothTouch: false,
-//         touchMultiplier: 2,
-//         infinite: false,
-//     })
-  
-//     function raf(time) {
-//         lenis.raf(time)
-//         requestAnimationFrame(raf)
-//     }
-  
-//     // Grab all elements that have a "data-target" attribute
-//     const scrollButtons = document.querySelectorAll('[data-target]');
-  
-//     // For each element, listen to a "click" event
-//     scrollButtons.forEach(button => {
-//         button.addEventListener('click', e => {
-//             e.preventDefault();
-  
-//             // get the DOM element by the ID (data-target value)
-//             var target = button.dataset.target,
-//                 $el = document.getElementById(target.replace('#', ''));
-    
-//             // Use lenis.scrollTo() to scroll the page to the right element
-//             lenis.scrollTo($el, {
-//                 offset: 0, 
-//                 immediate: false,
-//                 duration: 3,
-//                 easing: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2), // https://easings.net
-//             });
-//         });
-//     });
-  
-//     requestAnimationFrame(raf)
-// }
