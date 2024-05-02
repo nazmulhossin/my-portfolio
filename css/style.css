@@ -23,113 +23,45 @@
 }
 
 #preloader {
-  background-color: #191923;
+  background-color: var(--dark-main-background-color);
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 5;
+  z-index: 6;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-family: "Poppins", sans-serif;
 }
-#preloader .l {
-  color: black;
+#preloader div:first-child {
+  color: var(--dark-heading-text-color);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+#preloader #progress-bar {
+  width: 280px;
+  height: 3px;
+  background-color: var(--dark-body-background-color);
+}
+#preloader #progress-bar #progress-bar-fill {
+  width: 0;
+  height: 100%;
+  background-color: #FFC107;
+  transition: width 1.3s ease-in-out;
+}
+#preloader #progress-percentage {
+  color: var(--dark-paragraph-text-color);
+  font-size: 16px;
+}
+#preloader.fade-out-oader {
   opacity: 0;
-  animation: pass 1.5s ease-in-out infinite;
-  animation-delay: 0.2s;
-  letter-spacing: 0.5em;
-  text-shadow: 2px 2px 3px #919191;
+  transition: opacity 0.5s ease-in-out;
 }
-#preloader .o {
-  color: black;
-  opacity: 0;
-  animation: pass 1.5s ease-in-out infinite;
-  animation-delay: 0.4s;
-  letter-spacing: 0.5em;
-  text-shadow: 2px 2px 3px #919191;
-}
-#preloader .a {
-  color: black;
-  opacity: 0;
-  animation: pass 1.5s ease-in-out infinite;
-  animation-delay: 0.6s;
-  letter-spacing: 0.5em;
-  text-shadow: 2px 2px 3px #919191;
-}
-#preloader .d {
-  color: black;
-  opacity: 0;
-  animation: pass 1.5s ease-in-out infinite;
-  animation-delay: 0.8s;
-  letter-spacing: 0.5em;
-  text-shadow: 2px 2px 3px #919191;
-}
-#preloader .i {
-  color: black;
-  opacity: 0;
-  animation: pass 1.5s ease-in-out infinite;
-  animation-delay: 1s;
-  letter-spacing: 0.5em;
-  text-shadow: 2px 2px 3px #919191;
-}
-#preloader .n {
-  color: black;
-  opacity: 0;
-  animation: pass 1.5s ease-in-out infinite;
-  animation-delay: 1.2s;
-  letter-spacing: 0.5em;
-  text-shadow: 2px 2px 3px #919191;
-}
-#preloader .g {
-  color: black;
-  opacity: 0;
-  animation: pass 1.5s ease-in-out infinite;
-  animation-delay: 1.4s;
-  letter-spacing: 0.5em;
-  text-shadow: 2px 2px 3px #919191;
-}
-#preloader .d1 {
-  color: black;
-  opacity: 0;
-  animation: pass1 1.5s ease-in-out infinite;
-  animation-delay: 1.6s;
-  letter-spacing: 0.5em;
-  text-shadow: 2px 2px 3px #919191;
-}
-#preloader .d2 {
-  color: black;
-  opacity: 0;
-  animation: pass1 1.5s ease-in-out infinite;
-  animation-delay: 2s;
-  letter-spacing: 0.5em;
-  text-shadow: 2px 2px 3px #919191;
-}
-@keyframes pass {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes pass1 {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-#preloader.hideLoader {
-  opacity: 0;
-  transition: opacity 1s ease;
+#preloader.fade-out-oader div {
+  display: none;
 }
 
 header#mobile-top-bar {

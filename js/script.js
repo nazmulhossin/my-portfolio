@@ -1,12 +1,25 @@
-/* Hide loader */
+/* Loading Animation */
 window.addEventListener("load", () => {
-    document.getElementById("preloader").classList.add("hideLoader");
+    const preloader = document.getElementById("preloader");
+    const progressBarFill = document.getElementById('progress-bar-fill');
+    const loadingPercentage = document.getElementById('progress-percentage');
+    progressBarFill.style.width = `100%`;
 
-    // Set a short delay before starting the hide animation
-    setTimeout(function() {
-        document.getElementById("preloader").style.display = "none";
-    }, 1000);
+    for(let i = 0; i <= 100; i++) {
+        setTimeout(() => {
+            loadingPercentage.textContent = `${i}%`;
+        }, i * 13);
+    }
+
+    setTimeout(() => {
+        preloader.classList.add('fade-out-oader');
+    }, 1500);
+    
+    setTimeout(() => {
+        preloader.style.display = "none";
+    }, 1800);
 })
+
 
 
 /* Text Typing Animation */
@@ -24,7 +37,7 @@ var typed5 = new Typed('#textAnimation', {
 
 /* Counter Up Animation */
 const overviewEle = document.querySelectorAll(".counter span");
-const interval = 2000;
+const interval = 4000;
 overviewEle.forEach(ele => {
     const finalValue = parseInt(ele.getAttribute("data-finalValue"));
     const duration = Math.floor(interval / finalValue);

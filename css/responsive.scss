@@ -5,6 +5,20 @@
         --padding-30px: 2.5vw;
     }
 
+    #preloader {
+        div:first-child {
+            font-size: 3.4vw;
+        }
+    
+        #progress-bar {
+            width: 50vw;
+        }
+    
+        #progress-percentage {
+            font-size: 3.2vw;
+        }
+    }
+
     header#mobile-top-bar {
         height: 5vh;
     }
@@ -492,6 +506,20 @@
     :root {
         --padding-15px: 1.3vw;
         --padding-30px: 2.5vw;
+    }
+
+    #preloader {
+        div:first-child {
+            font-size: 15px;
+        }
+    
+        #progress-bar {
+            width: 230px;
+        }
+    
+        #progress-percentage {
+            font-size: 14px;
+        }
     }
 
     header#mobile-top-bar {
@@ -1680,6 +1708,20 @@
         --padding-30px: 25px;
     }
 
+    #preloader {
+        div:first-child {
+            font-size: 16px;
+        }
+    
+        #progress-bar {
+            width: 250px;
+        }
+    
+        #progress-percentage {
+            font-size: 15px;
+        }
+    }
+
     header#mobile-top-bar {
         height: 45px;
     }
@@ -2015,6 +2057,20 @@
         --padding-30px: 22px;
     }
 
+    #preloader {
+        div:first-child {
+            font-size: 16.5px;
+        }
+    
+        #progress-bar {
+            width: 270px;
+        }
+    
+        #progress-percentage {
+            font-size: 15.5px;
+        }
+    }
+
     header#mobile-top-bar {
         display: none;
     }
@@ -2285,6 +2341,20 @@
 
 /* Extra large devices (large laptops and desktops, 1440px and up) */
 @media only screen and (min-width: 1450px) {
+    #preloader {
+        div:first-child {
+            font-size: 17px;
+        }
+    
+        #progress-bar {
+            width: 280px;
+        }
+    
+        #progress-percentage {
+            font-size: 16px;
+        }
+    }
+
     .main-container {
         padding: 15px 0 15px 40px;
     
