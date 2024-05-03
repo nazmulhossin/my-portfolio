@@ -35,6 +35,19 @@ var typed5 = new Typed('#textAnimation', {
 
 
 
+/* Age Calculation */
+const today = new Date();
+const birthDate = new Date("1999-11-14");
+let myAge = today.getFullYear() - birthDate.getFullYear();
+const monthDiff = today.getMonth() - birthDate.getMonth();
+
+if(monthDiff < 0)
+    myAge--;
+
+document.getElementById("my-age").innerText = myAge;
+
+
+
 /* Counter Up Animation */
 const overviewEle = document.querySelectorAll(".counter span");
 const interval = 4000;
@@ -159,8 +172,7 @@ function ajax(method, url, data, success, error) {
 
 
 /* Get current year for copyright section*/
-const date = new Date();
-document.getElementById("curr_year").innerHTML = date.getFullYear();
+document.getElementById("curr_year").innerHTML = today.getFullYear();
 
 
 
