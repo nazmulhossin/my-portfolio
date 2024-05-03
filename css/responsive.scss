@@ -378,8 +378,8 @@
                         flex: 0 0 100%;
     
                         .card-wrapper {
-                            .project-screenshot {
-                                height: 25vh
+                            .project-screenshots, .project-screenshot {
+                                height: 190px;
                             }
     
                             .links {
@@ -865,8 +865,8 @@
                         flex: 0 0 100%;
     
                         .card-wrapper {
-                            .project-screenshot {
-                                height: 25vh;
+                            .project-screenshots, .project-screenshot {
+                                height: 293px;
                             }
     
                             .links {
@@ -1343,8 +1343,8 @@
                         flex: 0 0 100%;
     
                         .card-wrapper {
-                            .project-screenshot {
-                                height: 300px;
+                            .project-screenshots, .project-screenshot {
+                                height: 325px;
                             }
     
                             .links {
@@ -1667,6 +1667,18 @@
                     }
                 }
             }
+
+            #projects {
+                .card-container {
+                    .card {    
+                        .card-wrapper {
+                            .project-screenshots, .project-screenshot {
+                                height: 368px;
+                            }
+                        }
+                    }
+                }
+            }
     
             #contact {
                 .big-card {
@@ -1871,8 +1883,8 @@
                 .card-container {
                     .card {    
                         .card-wrapper {
-                            .project-screenshot {
-                                height: 320px;
+                            .project-screenshots, .project-screenshot {
+                                height: 425px;
                             }
     
                             .links {
@@ -1995,7 +2007,7 @@
 
                         .card-wrapper {
                             .project-screenshots, .project-screenshot {
-                                height: 200px;
+                                height: 218px;
                             }
                         }
                     }
@@ -2038,8 +2050,12 @@
                         flex: 0 0 50%;
     
                         .card-wrapper {
+                            .project-screenshots {
+                                height: 273px;
+                            }
+    
                             .project-screenshot {
-                                height: 210px;
+                                height: 273px;
                             }
                         }
                     }
@@ -2120,9 +2136,11 @@
             }
     
             #home {
-                height: 75%;    
+                height: 75%;
+
                 .big-card-container {
                     padding: 0 var(--padding-15px);
+                    padding-top: 10px;
 
                     .big-card {        
                         h1 {
@@ -2286,6 +2304,22 @@
                     } 
                 }
             }
+
+            #projects {
+                .card-container {
+                    .card {
+                        .card-wrapper {
+                            .project-screenshots {
+                                height: 224px;
+                            }
+    
+                            .project-screenshot {
+                                height: 224px;
+                            }
+                        }
+                    }
+                }
+            }
     
             #hider {
                 display: block;
@@ -2326,11 +2360,28 @@
                 .big-card-container {
                     height: 84.5%;
                     padding: 0 var(--padding-15px);
+                    padding-top: 10px;
 
                     .big-card {        
                         img {
                             width: 350px;
                             right: -177px;
+                        }
+                    }
+                }
+            }
+
+            #projects {
+                .card-container {
+                    .card {
+                        .card-wrapper {
+                            .project-screenshots {
+                                height: 267px;
+                            }
+    
+                            .project-screenshot {
+                                height: 267px;
+                            }
                         }
                     }
                 }
@@ -2341,6 +2392,11 @@
 
 /* Extra large devices (large laptops and desktops, 1440px and up) */
 @media only screen and (min-width: 1450px) {
+    :root {
+        --padding-15px: 15px;
+        --padding-30px: 30px;
+    }
+
     #preloader {
         div:first-child {
             font-size: 17px;
@@ -2363,7 +2419,7 @@
     
             #profile {
                 height: 41.5%;
-                padding: 0 30px;
+                padding: 0 var(--padding-30px);
     
                 #name_img {
                     img {
@@ -2418,7 +2474,7 @@
             }
             
             #accounts {
-                padding: 0 30px;
+                padding: 0 var(--padding-30px);
                 height: 6.5%;
     
                 ul {    
@@ -2449,7 +2505,7 @@
                 }
     
                 .big-card-container {
-                    padding: 15px;
+                    padding: var(--padding-15px);
                 }
     
                 .card-container {
@@ -2458,7 +2514,7 @@
                         padding: 15px;
         
                         .card-wrapper {
-                            padding: 30px;
+                            padding: var(--padding-30px);
     
                             .logo {
                                 svg, img {
@@ -2510,10 +2566,11 @@
             }
     
             #home {
-                height: 98%;
+                height: 97%;
 
                 .big-card-container {
-                    height: 86.5%;
+                    padding-top: 10px;
+                    height: 86%;
     
                     .big-card {        
                         h1 {
@@ -2560,7 +2617,7 @@
             #about {
                 .big-card-container {
                     .big-card {
-                        padding: 30px;
+                        padding: var(--padding-30px);
     
                         div:first-child {
                             width: 60%;
@@ -2611,7 +2668,7 @@
                             
                             .timeline-content {
                                 margin-left: 45px;
-                                padding: 30px;
+                                padding: var(--padding-30px);
                                 margin-bottom: 30px;
     
                                 .timeline-content-header {
@@ -2741,12 +2798,12 @@
     
                         .card-wrapper {
                             .project-screenshots {
-                                height: 250px;
+                                height: 255px;
                                 margin-bottom: 20px;
                             }
     
                             .project-screenshot {
-                                height: 250px;
+                                height: 255px;
                                 margin-bottom: 20px;
                             }
     
@@ -2767,7 +2824,7 @@
     
             #contact {
                 .big-card {
-                    padding: 30px;
+                    padding: var(--padding-30px);
     
                     p {
                         margin-bottom: 30px;

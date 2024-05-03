@@ -203,7 +203,7 @@ header#mobile-top-bar {
         
         #accounts {
             background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
-            padding: 0 30px;
+            padding: 0 var(--padding-30px);
             height: 6.5%;
 
             ul {
@@ -370,12 +370,13 @@ header#mobile-top-bar {
         }
 
         #home {
-            height: 98%;
+            height: 97%;
             margin-bottom: 0;
 
             .big-card-container {
-                padding-top: 0;
-                height: 86.5%;
+                padding-top: 10px;
+                padding: 0 var(--padding-15px);
+                height: 86%;
 
                 .big-card {
                     background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
@@ -788,6 +789,10 @@ header#mobile-top-bar {
                                     object-position: bottom center;
                                     transition: all 3s linear;
                                 }
+
+                                &:last-child {
+                                    display: none;
+                                }
                             }
                         }
 
@@ -1143,6 +1148,26 @@ header#mobile-top-bar {
 }
 
 body.light-theme {
+    #preloader {
+        background-color: #fefefe;
+    
+        div:first-child {
+            color: var(--light-heading-text-color);
+        }
+    
+        #progress-bar {
+            background-color: var(--light-body-background-color);
+    
+            #progress-bar-fill {
+                background-color: #FF7004;
+            }
+        }
+    
+        #progress-percentage {
+            color: var(--light-paragraph-text-color);
+        }
+    }
+
     header#mobile-top-bar {
         background-color: var(--light-card-background-color);
     }
@@ -1355,6 +1380,26 @@ body.light-theme {
                             background-color: transparent;
                         }
                     } 
+                }
+            }
+
+            #projects {
+                .card-container {
+                    .card {
+                        .card-wrapper {
+                            .project-screenshot {
+                                img {
+                                    &:first-child {
+                                        display: none;
+                                    }
+
+                                    &:last-child {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
