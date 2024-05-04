@@ -202,6 +202,8 @@ header#mobile-top-bar {
   font-size: 15px;
   color: var(--dark-paragraph-text-color);
   position: relative;
+  scrollbar-width: normal;
+  scrollbar-color: rgba(52, 52, 64, 0.98) rgb(38, 38, 48);
 }
 .main-container main section h2 {
   color: var(--dark-heading-text-color);
@@ -1023,6 +1025,7 @@ body.light-theme .main-container aside #accounts ul li a:hover {
 body.light-theme .main-container main {
   background-color: var(--light-main-background-color);
   color: var(--light-paragraph-text-color);
+  scrollbar-color: #C1C1C1 #F1F1F1;
 }
 body.light-theme .main-container main section h2 {
   color: var(--light-heading-text-color);

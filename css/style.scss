@@ -240,6 +240,8 @@ header#mobile-top-bar {
         font-size: 15px;
         color: var(--dark-paragraph-text-color);
         position: relative;
+        scrollbar-width: normal;
+        scrollbar-color: rgba(52, 52, 64, 0.98) rgb(38, 38, 48);
        
 
         section {
@@ -1250,6 +1252,7 @@ body.light-theme {
         main {
             background-color: var(--light-main-background-color);
             color: var(--light-paragraph-text-color);
+            scrollbar-color: #C1C1C1 #F1F1F1;
 
             section {
                 h2 {
