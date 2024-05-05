@@ -95,8 +95,16 @@
   .main-container aside #accounts ul li a {
     font-size: 5vw;
   }
+  .main-container .column.col_right {
+    width: 100%;
+  }
+  .main-container .column.col_right #hider {
+    width: 0;
+  }
   .main-container main {
     width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
     padding: 0;
     font-size: 2.75vw;
   }
@@ -137,7 +145,7 @@
     font-size: 2.3vw;
   }
   .main-container main #home {
-    height: 35%;
+    height: 35vh;
   }
   .main-container main #home .big-card-container {
     height: 83%;
@@ -293,9 +301,6 @@
   .main-container main #copyright .big-card-container .big-card {
     padding: 10px;
   }
-  .main-container main #hider {
-    display: none;
-  }
   .main-container #theme {
     width: 150px;
     top: 41%;
@@ -425,8 +430,16 @@
   .main-container aside #accounts ul li a {
     font-size: 20px;
   }
+  .main-container .column.col_right {
+    width: 100%;
+  }
+  .main-container .column.col_right #hider {
+    width: 0;
+  }
   .main-container main {
     width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
     padding: 0;
     font-size: 2.3vw;
   }
@@ -468,10 +481,10 @@
     font-size: 2.3vw;
   }
   .main-container main #home {
-    height: 40%;
+    height: 40vh;
   }
   .main-container main #home .big-card-container {
-    height: 80%;
+    height: 83%;
     padding: 0;
   }
   .main-container main #home .big-card-container .big-card h1 {
@@ -567,7 +580,7 @@
     flex: 0 0 100%;
   }
   .main-container main #projects .card-container .card .card-wrapper .project-screenshots, .main-container main #projects .card-container .card .card-wrapper .project-screenshot {
-    height: 293px;
+    height: 240px;
   }
   .main-container main #projects .card-container .card .card-wrapper .links a:nth-child(2) {
     width: 18vw;
@@ -610,9 +623,6 @@
   .main-container main #copyright .big-card-container .big-card {
     padding: 10px;
   }
-  .main-container main #hider {
-    display: none;
-  }
   .main-container #theme {
     width: 150px;
     top: 42%;
@@ -643,6 +653,21 @@
     font-size: 17px;
     padding: 3px 15px;
     border-radius: 3px;
+  }
+}
+/* Extra small devices (phones, 500px and up) */
+@media only screen and (min-width: 500px) {
+  .main-container main #home {
+    height: 42vh;
+  }
+  .main-container main #home .big-card-container {
+    height: 80%;
+  }
+  .main-container main #projects .card-container .card {
+    flex: 0 0 100%;
+  }
+  .main-container main #projects .card-container .card .card-wrapper .project-screenshots, .main-container main #projects .card-container .card .card-wrapper .project-screenshot {
+    height: 280px;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -676,7 +701,7 @@
     height: 20px;
     width: 20px;
     top: 10px;
-    right: -50px;
+    right: -40px;
     transition: all 0.5s ease-in-out;
   }
   .main-container aside #sidebar-show-hide-button i {
@@ -738,8 +763,6 @@
     font-size: 20px;
   }
   .main-container main {
-    width: 100%;
-    padding: 0;
     font-size: 13.5px;
   }
   .main-container main section h2 {
@@ -780,12 +803,11 @@
     font-size: 14px;
   }
   .main-container main #home {
-    height: 45%;
+    height: 45vh;
   }
   .main-container main #home .big-card-container {
     height: 80%;
     padding: 0;
-    overflow: hidden;
   }
   .main-container main #home .big-card-container .big-card h1 {
     top: 20px;
@@ -924,9 +946,6 @@
   .main-container main #copyright .big-card-container .big-card {
     padding: 10px;
   }
-  .main-container main #hider {
-    display: none;
-  }
   .main-container #theme {
     width: 170px;
     top: 45%;
@@ -1031,7 +1050,7 @@
     font-size: 15px;
   }
   .main-container main #home {
-    height: 50%;
+    height: 50vh;
   }
   .main-container main #home .big-card-container {
     height: 80%;
@@ -1152,7 +1171,7 @@
     font-size: 15px;
   }
   .main-container main #home {
-    height: 50%;
+    height: 50vh;
   }
   .main-container main #home .big-card-container .big-card h1 {
     top: var(--padding-30px);
@@ -1272,10 +1291,10 @@
 /* Medium devices (landscape tablets, 900px and up) */
 @media only screen and (min-width: 900px) {
   .main-container main #home {
-    height: 45%;
+    height: 45vh;
   }
   .main-container main #home .big-card-container {
-    height: 85%;
+    height: 77%;
   }
   .main-container main #home .big-card-container .big-card img {
     width: 300px;
@@ -1339,10 +1358,15 @@
   .main-container aside #sidebar-show-hide-button {
     display: none;
   }
-  .main-container main {
+  .main-container .column.col_right {
     width: calc(100% - 280px);
+  }
+  .main-container .column.col_right #hider {
+    width: 10px;
+  }
+  .main-container main {
+    width: calc(100% - 10px);
     padding: 0 15px;
-    padding-right: 25px;
   }
   .main-container main section .card-container .card {
     padding: var(--padding-15px);
@@ -1358,9 +1382,10 @@
     line-height: 1.5;
   }
   .main-container main #home {
-    height: 75%;
+    height: 75vh;
   }
   .main-container main #home .big-card-container {
+    height: 83%;
     padding: 0 var(--padding-15px);
     padding-top: 10px;
   }
@@ -1464,13 +1489,6 @@
   .main-container main #projects .card-container .card .card-wrapper .project-screenshot {
     height: 224px;
   }
-  .main-container main #hider {
-    display: block;
-    width: 10px;
-    height: calc(100vh - 30px);
-    top: 15px;
-    right: 17px;
-  }
   .main-container::after {
     content: "";
     clear: both;
@@ -1483,10 +1501,10 @@
     font-size: 15px;
   }
   .main-container main #home {
-    height: 90%;
+    height: 90vh;
   }
   .main-container main #home .big-card-container {
-    height: 84.5%;
+    height: 85.5%;
     padding: 0 var(--padding-15px);
     padding-top: 10px;
   }
@@ -1566,10 +1584,15 @@
   .main-container aside #accounts ul li a {
     font-size: 22px;
   }
-  .main-container main {
+  .main-container .column.col_right {
     width: calc(100% - 300px);
+  }
+  .main-container .column.col_right #hider {
+    width: 30px;
+  }
+  .main-container main {
+    width: calc(100% - 30px);
     padding: 0 15px;
-    padding-right: 45px;
     font-size: 15px;
   }
   .main-container main section h2 {
@@ -1623,7 +1646,7 @@
     margin-left: 7px;
   }
   .main-container main #home {
-    height: 97%;
+    height: 94vh;
   }
   .main-container main #home .big-card-container {
     padding-top: 10px;
@@ -1860,12 +1883,6 @@
   .main-container main #copyright .big-card-container .big-card {
     font-weight: 500;
     padding: 15px;
-  }
-  .main-container main #hider {
-    width: 30px;
-    height: calc(100vh - 30px);
-    top: 15px;
-    right: 17px;
   }
   .main-container #theme {
     width: 170px;

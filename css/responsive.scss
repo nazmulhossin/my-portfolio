@@ -137,9 +137,18 @@
                 }
             }
         }
+
+        .column.col_right {
+            width: 100%;
+    
+            #hider {
+                width: 0;
+            }
+        }
         
         main {
             width: 100%;
+            height: fit-content;
             padding: 0;
             font-size: 2.75vw;
     
@@ -197,7 +206,7 @@
             }
     
             #home {
-                height: 35%;
+                height: 35vh;
 
                 .big-card-container {
                     height: 83%;
@@ -448,10 +457,6 @@
                     }
                 }
             }
-    
-            #hider {
-                display: none;
-            }
         }
 
         #theme {
@@ -641,8 +646,17 @@
             }
         }
         
+        .column.col_right {
+            width: 100%;
+    
+            #hider {
+                width: 0;
+            }
+        }
+
         main {
             width: 100%;
+            height: fit-content;
             padding: 0;
             font-size: 2.3vw;
     
@@ -701,10 +715,10 @@
             }
     
             #home {
-                height: 40%;
+                height: 40vh;
 
                 .big-card-container {
-                    height: 80%;
+                    height: 83%;
                     padding: 0;
 
                     .big-card {        
@@ -866,7 +880,7 @@
     
                         .card-wrapper {
                             .project-screenshots, .project-screenshot {
-                                height: 293px;
+                                height: 240px;
                             }
     
                             .links {
@@ -933,11 +947,7 @@
                         padding: 10px;
                     }
                 }
-            }
-    
-            #hider {
-                display: none;
-            }
+            }  
         }
 
         #theme {
@@ -986,6 +996,37 @@
         }
     }
 }
+
+
+/* Extra small devices (phones, 500px and up) */
+@media only screen and (min-width: 500px) {
+    .main-container {
+        main {
+            #home {
+                height: 42vh;
+
+                .big-card-container {
+                    height: 80%;
+                }
+            }
+
+            #projects {
+                .card-container {
+                    .card {
+                        flex: 0 0 100%;
+    
+                        .card-wrapper {
+                            .project-screenshots, .project-screenshot {
+                                height: 280px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
   
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -1021,7 +1062,7 @@
                 height: 20px;
                 width: 20px;
                 top: 10px;
-                right: -50px;
+                right: -40px;
                 transition: all 0.5s ease-in-out;
 
                 i {
@@ -1118,8 +1159,6 @@
         }
         
         main {
-            width: 100%;
-            padding: 0;
             font-size: 13.5px;
     
             section {
@@ -1177,12 +1216,11 @@
             }
     
             #home {
-                height: 45%;
+                height: 45vh;
 
                 .big-card-container {
                     height: 80%;
                     padding: 0;
-                    overflow: hidden;
 
                     .big-card {        
                         h1 {
@@ -1412,10 +1450,6 @@
                     }
                 }
             }
-    
-            #hider {
-                display: none;
-            }
         }
 
         #theme {
@@ -1577,7 +1611,7 @@
             }
     
             #home {
-                height: 50%;
+                height: 50vh;
 
                 .big-card-container {
                     height: 80%;
@@ -1786,7 +1820,7 @@
             }
     
             #home {
-                height: 50%;
+                height: 50vh;
 
                 .big-card-container {
                     .big-card {        
@@ -1986,10 +2020,10 @@
     .main-container {
         main {
             #home {
-                height: 45%;
+                height: 45vh;
 
                 .big-card-container {
-                    height: 85%;
+                    height: 77%;
 
                     .big-card {
                         img {
@@ -2108,11 +2142,18 @@
                 display: none;
             }
         }
+
+        .column.col_right {
+            width: calc(100% - 280px);
+    
+            #hider {
+                width: 10px;
+            }
+        }
         
         main {
-            width: calc(100% - 280px);
+            width: calc(100% - 10px);
             padding: 0 15px;
-            padding-right: 25px;
             
             section {
                 .card-container {
@@ -2136,9 +2177,10 @@
             }
     
             #home {
-                height: 75%;
+                height: 75vh;
 
                 .big-card-container {
+                    height: 83%;
                     padding: 0 var(--padding-15px);
                     padding-top: 10px;
 
@@ -2320,14 +2362,6 @@
                     }
                 }
             }
-    
-            #hider {
-                display: block;
-                width: 10px;
-                height: calc(100vh - 30px);
-                top: 15px;
-                right: 17px;
-            }
         }
 
         &::after {
@@ -2355,10 +2389,10 @@
             }
     
             #home {
-                height: 90%;   
+                height: 90vh;   
 
                 .big-card-container {
-                    height: 84.5%;
+                    height: 85.5%;
                     padding: 0 var(--padding-15px);
                     padding-top: 10px;
 
@@ -2486,11 +2520,18 @@
                 }
             }
         }
+
+        .column.col_right {
+            width: calc(100% - 300px);
+    
+            #hider {
+                width: 30px;
+            }
+        }
         
         main {
-            width: calc(100% - 300px);
+            width: calc(100% - 30px);
             padding: 0 15px;
-            padding-right: 45px;
             font-size: 15px;
     
             section {
@@ -2566,7 +2607,7 @@
             }
     
             #home {
-                height: 97%;
+                height: 94vh;
 
                 .big-card-container {
                     padding-top: 10px;
@@ -2920,13 +2961,6 @@
                         padding: 15px;
                     }
                 }
-            }
-    
-            #hider {
-                width: 30px;
-                height: calc(100vh - 30px);
-                top: 15px;
-                right: 17px;
             }
         }
     

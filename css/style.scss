@@ -229,20 +229,27 @@ header#mobile-top-bar {
             }
         }
     }
+
+    .column.col_right {
+        width: calc(100% - 300px);
+        overflow: auto;
+        height: 100%;
+        display: flex;
+        scrollbar-width: normal;
+        scrollbar-color: rgba(52, 52, 64, 0.98) rgb(38, 38, 48);
+
+        #hider {
+            width: 30px;
+        }
+    }
     
     main {
         background-color: var(--dark-main-background-color);
-        width: calc(100% - 300px);
-        height: 100%;
-        overflow: auto;
+        width: calc(100% - 30px);
+        height: fit-content;
         padding: 0 15px;
-        padding-right: 45px;
         font-size: 15px;
         color: var(--dark-paragraph-text-color);
-        position: relative;
-        scrollbar-width: normal;
-        scrollbar-color: rgba(52, 52, 64, 0.98) rgb(38, 38, 48);
-       
 
         section {
             h2 {
@@ -372,7 +379,7 @@ header#mobile-top-bar {
         }
 
         #home {
-            height: 97%;
+            height: 97vh;
             margin-bottom: 0;
 
             .big-card-container {
@@ -752,12 +759,12 @@ header#mobile-top-bar {
                                 transition: transform 0.2s ease-in-out;
     
                                 img {
-                                    width: 100%;
+                                    max-width: 100%;
                                 }
     
                                 &:hover {
                                     animation: slide 8s infinite;
-    
+
                                     @keyframes slide {
                                         0% {transform: translateX(0);}
                                         16% {transform: translateX(0);}
@@ -999,15 +1006,6 @@ header#mobile-top-bar {
                 }
             }
         }
-
-        #hider {
-            background-color: var(--dark-body-background-color);
-            width: 30px;
-            height: calc(100vh - 30px);
-            position: fixed;
-            top: 15px;
-            right: 17px;
-        }
     }
 
     &::after {
@@ -1248,11 +1246,14 @@ body.light-theme {
                 }
             }
         }
+
+        .column.col_right {
+            scrollbar-color: #C1C1C1 #F1F1F1;
+        }
         
         main {
             background-color: var(--light-main-background-color);
             color: var(--light-paragraph-text-color);
-            scrollbar-color: #C1C1C1 #F1F1F1;
 
             section {
                 h2 {
@@ -1435,10 +1436,6 @@ body.light-theme {
                         }
                     }
                 }
-            }
-
-            #hider {
-                background-color: var(--light-body-background-color);
             }
         }
 

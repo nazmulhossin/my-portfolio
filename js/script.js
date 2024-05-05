@@ -49,20 +49,22 @@ document.getElementById("my-age").innerText = myAge;
 
 
 /* Counter Up Animation */
-const overviewEle = document.querySelectorAll(".counter span");
-const interval = 4000;
-overviewEle.forEach(ele => {
-    const finalValue = parseInt(ele.getAttribute("data-finalValue"));
-    const duration = Math.floor(interval / finalValue);
-    let startValue = Math.max(0, finalValue - 500);
-    const counter = setInterval(function() {
-        startValue += 1;
-        ele.textContent = startValue;
+setTimeout(() => {
+    const counters = document.querySelectorAll(".counter span");
+    const interval = 2200;
+    counters.forEach(counter => {
+        const finalValue = parseInt(counter.getAttribute("data-finalValue"));
+        const duration = Math.floor(interval / finalValue);
+        let startValue = Math.max(0, finalValue - 500);
+        const updateCounter = setInterval(function() {
+            startValue += 1;
+            counter.textContent = startValue;
 
-        if(startValue == finalValue)
-            clearInterval(counter);
-    }, duration);
-});
+            if(startValue == finalValue)
+                clearInterval(updateCounter);
+        }, duration);
+    }); 
+}, 1800);
 
 
 

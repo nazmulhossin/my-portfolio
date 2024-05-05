@@ -192,18 +192,25 @@ header#mobile-top-bar {
 .main-container aside #accounts ul li a:hover {
   color: var(--link-hover-color);
 }
-.main-container main {
-  background-color: var(--dark-main-background-color);
+.main-container .column.col_right {
   width: calc(100% - 300px);
-  height: 100%;
   overflow: auto;
-  padding: 0 15px;
-  padding-right: 45px;
-  font-size: 15px;
-  color: var(--dark-paragraph-text-color);
-  position: relative;
+  height: 100%;
+  display: flex;
   scrollbar-width: normal;
   scrollbar-color: rgba(52, 52, 64, 0.98) rgb(38, 38, 48);
+}
+.main-container .column.col_right #hider {
+  width: 30px;
+}
+.main-container main {
+  background-color: var(--dark-main-background-color);
+  width: calc(100% - 30px);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 15px;
+  font-size: 15px;
+  color: var(--dark-paragraph-text-color);
 }
 .main-container main section h2 {
   color: var(--dark-heading-text-color);
@@ -310,7 +317,7 @@ header#mobile-top-bar {
   opacity: 0.8;
 }
 .main-container main #home {
-  height: 97%;
+  height: 97vh;
   margin-bottom: 0;
 }
 .main-container main #home .big-card-container {
@@ -600,7 +607,7 @@ header#mobile-top-bar {
   transition: transform 0.2s ease-in-out;
 }
 .main-container main #projects .card-container .card .card-wrapper .project-screenshots .project-screenshots-wrapper img {
-  width: 100%;
+  max-width: 100%;
 }
 .main-container main #projects .card-container .card .card-wrapper .project-screenshots .project-screenshots-wrapper:hover {
   animation: slide 8s infinite;
@@ -821,14 +828,6 @@ header#mobile-top-bar {
 .main-container main #copyright .big-card-container .big-card .name {
   color: var(--link-hover-color);
 }
-.main-container main #hider {
-  background-color: var(--dark-body-background-color);
-  width: 30px;
-  height: calc(100vh - 30px);
-  position: fixed;
-  top: 15px;
-  right: 17px;
-}
 .main-container::after {
   content: "";
   clear: both;
@@ -1022,10 +1021,12 @@ body.light-theme .main-container aside #accounts ul li a {
 body.light-theme .main-container aside #accounts ul li a:hover {
   color: var(--link-hover-color);
 }
+body.light-theme .main-container .column.col_right {
+  scrollbar-color: #C1C1C1 #F1F1F1;
+}
 body.light-theme .main-container main {
   background-color: var(--light-main-background-color);
   color: var(--light-paragraph-text-color);
-  scrollbar-color: #C1C1C1 #F1F1F1;
 }
 body.light-theme .main-container main section h2 {
   color: var(--light-heading-text-color);
@@ -1108,9 +1109,6 @@ body.light-theme .main-container main #contact .big-card #contact-wrapper #form-
 }
 body.light-theme .main-container main #contact .big-card #contact-wrapper #form-wrapper form button {
   color: #fafafc;
-}
-body.light-theme .main-container main #hider {
-  background-color: var(--light-body-background-color);
 }
 body.light-theme .main-container #theme #theme-wrapper {
   color: #fafafc;
