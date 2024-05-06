@@ -181,10 +181,10 @@ document.getElementById("curr_year").innerHTML = today.getFullYear();
 /* Active Nav Link on Scroll */
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a");
-const main = document.querySelector("main");
-main.onscroll = () => {
+const rightColumn = document.querySelector(".col_right");
+rightColumn.onscroll = () => {
     sections.forEach(section => {
-        const top = main.scrollTop;
+        const top = rightColumn.scrollTop;
         const offset = section.offsetTop - 170;
         const height = section.offsetHeight;
         const sectionId = section.getAttribute("id");
@@ -208,7 +208,6 @@ navLinks.forEach(function(link) {
 
         // Get the div to be moved
         const divToMove = document.getElementById(targetDiv);
-        
         divToMove.scrollIntoView({behavior: "smooth"});
     });
 });
