@@ -70,57 +70,58 @@ setTimeout(() => {
 
 /* call api for finding problem solving info */
 // fetch codeforces info
-var codeforcesSolved = 950, codeforcesContest = 79, codeforcesRating = 1441;
 fetch('https://codeforces.com/api/user.rating?handle=nazmul_hossin')
     .then(response => {
-        if(!response.ok) {
-            document.getElementById("codeforces-contest").innerHTML = codeforcesContest;
+        if(!response.ok)
             throw new Error(response.status);
-        }
             
         return response.json();
     })
     .then(data => document.getElementById("codeforces-contest").innerHTML = data.result.length)
-    .catch(error => document.getElementById("codeforces-contest").innerHTML = codeforcesContest);
+    .catch(error => console.log(error));
 
 
 fetch('https://codeforces.com/api/user.info?handles=nazmul_hossin&checkHistoricHandles=false')
     .then(response => {
-        if(!response.ok) {
-            document.getElementById("codeforces-rating").innerHTML = codeforcesRating;
+        if(!response.ok)
             throw new Error(response.status);
-        }
             
         return response.json();
     })
     .then(data => document.getElementById("codeforces-rating").innerHTML = data.result[0]["maxRating"])
-    .catch(error => document.getElementById("codeforces-rating").innerHTML = codeforcesRating);
+    .catch(error => console.log(error));
 
 // fetch leetcode info
-var leetcodeSolved = 190, leetcodeContest = 8;
 fetch('https://alfa-leetcode-api.onrender.com/nazmul_hossin/solved')
     .then(response => {
-        if(!response.ok) {
-            document.getElementById("leetcode-solved").innerHTML = leetcodeSolved;
+        if(!response.ok)
             throw new Error(response.status);
-        }
             
         return response.json();
     })
     .then(data => document.getElementById("leetcode-solved").innerHTML = data.solvedProblem)
-    .catch(error => document.getElementById("leetcode-solved").innerHTML = leetcodeSolved);
+    .catch(error => console.log(error));
 
 fetch('https://alfa-leetcode-api.onrender.com/nazmul_hossin/contest')
     .then(response => {
-        if(!response.ok) {
-            document.getElementById("leetcode-contest").innerHTML = leetcodeContest;
+        if(!response.ok)
             throw new Error(response.status);
-        }
     
         return response.json();
     })
     .then(data => document.getElementById("leetcode-contest").innerHTML = data.contestAttend)
-    .catch(error => document.getElementById("leetcode-contest").innerHTML = leetcodeContest);
+    .catch(error => console.log(error));
+
+// fetch atcoder info
+fetch('https://kenkoooo.com/atcoder/atcoder-api/v2/user_info?user=nazmul_hossin')
+    .then(response => {
+        if(!response.ok)
+            throw new Error(response.status);
+        
+        return response.json();
+    })
+    .then(data => document.getElementById("atcoder-solved").innerHTML = data.accepted_count)
+    .catch(error => console.log(error));
 
 
 
